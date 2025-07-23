@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Affiliate Products</title>
+    <title>SmartlyNow - Smart Gadgets</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Affiliate Products</h1>
+        <h1>SmartlyNow</h1>
+        <input type="text" id="searchBar" placeholder="Search products...">
     </header>
-    <main>
-        <div id="products-container"></div>
+
+    <nav>
+        <ul id="categoryFilter">
+            <li data-category="budget">Budget</li>
+            <li data-category="midrange">Midrange</li>
+            <li data-category="premium">Premium</li>
+        </ul>
+    </nav>
+
+    <main id="productGrid">
+        <!-- Products will be injected here -->
     </main>
+
     <footer>
-        <p>&copy; 2023 My Affiliate Products</p>
+        <p>&copy; 2023 SmartlyNow | Designed for Amazon Affiliates</p>
+        <div class="pinterest-share">
+            <button onclick="shareOnPinterest()">Share on Pinterest</button>
+        </div>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
