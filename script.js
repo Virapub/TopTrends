@@ -1,6 +1,6 @@
 const products = [
     // Sample product data
-    { id: 1, name: "Smart Kitchen Gadget", price: 29.99, category: "budget", imageUrl: "product1.jpg", link: "YOUR_AFFILIATE_LINK" },
+    { id: Smart Touch Air Fryer, name: "Smart Touch Air Fryer", price: 29.99, category: "budget", imageUrl: "product1.jpg", link: "YOUR_AFFILIATE_LINK" },
     { id: 2, name: "Premium Smart Gadget", price: 89.99, category: "premium", imageUrl: "product2.jpg", link: "YOUR_AFFILIATE_LINK" },
     // more products...
 ];
