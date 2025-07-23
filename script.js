@@ -1,6 +1,6 @@
 const products = [
     // Sample product data
-    { id: 1, name: "Smart Wi-Fi Coffee Maker", price: 29.99, category: "budget", imageUrl: "product1.jpg", link: "YOUR_AFFILIATE_LINK" },
+    { id: 1, name: "Smart Wi-Fi Coffee Maker", price: 29.99, category: "budget", imageUrl: "https://m.media-amazon.com/images/I/71b4ReFYVrL._AC_SX679_.jpg", link: "YOUR_AFFILIATE_LINK" },
     { id: 2, name: "Premium Smart Gadget", price: 89.99, category: "premium", imageUrl: "product2.jpg", link: "YOUR_AFFILIATE_LINK" },
     // more products...
 ];
