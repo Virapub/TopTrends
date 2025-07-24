@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     async function getUserCountry() {
         try {
             // Replace 'YOUR_IPINFO_TOKEN' with your actual IPinfo API token
-            const response = await fetch('https://ipinfo.io/json?token=YOUR_IPINFO_TOKEN');
-            const data = await response.json();
+            const response = await fetch('https://api.ipinfo.io/lite/8.8.8.8?token=13425fe40bc709');
+            const data = await response.json();curl https://api.ipinfo.io/lite/8.8.8.8?token=13425fe40bc709
             if (data && data.country) {
                 currentUserCountry = data.country;
                 console.log('User detected country:', currentUserCountry);
