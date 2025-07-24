@@ -3,33 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartlyNow - Smart Gadgets</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>TechHaven - Electronics & Gadgets Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>SmartlyNow</h1>
-        <input type="text" id="searchBar" placeholder="Search products...">
+        <div class="container">
+            <h1 class="site-title" data-page="home">TechHaven</h1>
+            <nav class="main-nav">
+                <div class="nav-item dropdown">
+                    <button class="dropbtn">Categories <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#" data-category="all">All Products</a>
+                        <a href="#" data-category="laptops">Laptops</a>
+                        <a href="#" data-category="smartphones">Smartphones</a>
+                        <a href="#" data-category="accessories">Accessories</a>
+                        <a href="#" data-category="gaming">Gaming</a>
+                        <a href="#" data-category="audio">Audio</a>
+                        </div>
+                </div>
+                <div class="nav-item">
+                    <button id="compare-page-btn" class="nav-link"><i class="fas fa-balance-scale"></i> Compare</button>
+                </div>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
     </header>
 
-    <nav>
-        <ul id="categoryFilter">
-            <li data-category="budget">Budget</li>
-            <li data-category="midrange">Midrange</li>
-            <li data-category="premium">Premium</li>
-        </ul>
-    </nav>
+    <main class="container">
+        <section id="hero-section" class="active">
+            <div class="hero-slider">
+                </div>
+            <button class="slider-nav prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-nav next"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-dots"></div>
+        </section>
 
-    <main id="productGrid">
-        <!-- Products will be injected here -->
+        <section id="product-listing" class="active">
+            <h2>Featured Products</h2>
+            <div id="product-grid" class="product-grid">
+                </div>
+        </section>
+
+        <section id="product-detail" class="hidden">
+            <button id="backToListing" class="back-button"><i class="fas fa-arrow-left"></i> Back to Products</button>
+            <div id="detail-content" class="product-detail-card">
+                </div>
+            <div id="related-products-section" class="related-products-grid">
+                <h3>Customers also bought</h3>
+                <div id="related-products-grid" class="product-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="compare-products-section" class="hidden">
+            <button id="backFromCompare" class="back-button"><i class="fas fa-arrow-left"></i> Back to Products</button>
+            <h2>Compare Products (<span id="compare-count">0</span>/3)</h2>
+            <div id="compare-selection-grid" class="product-grid compare-selection-grid">
+                </div>
+            <button id="start-comparison-btn" class="main-cta-button hidden">Start Comparison</button>
+            <div id="comparison-table-container" class="hidden">
+                <table id="comparison-table">
+                    </table>
+                <button id="clear-comparison-btn" class="main-cta-button clear-button">Clear Comparison</button>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 SmartlyNow | Designed for Amazon Affiliates</p>
-        <div class="pinterest-share">
-            <button onclick="shareOnPinterest()">Share on Pinterest</button>
+        <div class="container">
+            <p>&copy; 2025 TechHaven. All rights reserved.</p>
+            <p>Built with <i class="fas fa-heart"></i> for tech enthusiasts.</p>
         </div>
     </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
