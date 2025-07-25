@@ -3,7 +3,7 @@
 const heroSlides = [
     {
         id: 'hero1',
-        imageUrl: 'https://m.media-amazon.com/images/I/51Yi2aZ218L._AC_SL1000_.jpg',
+        imageUrl: 'https://m.media-amazon.com/images/I/51gEuoeUX0L._AC_SL1000_.jpg',
         title: 'Unleash Your Potential',
         description: 'Discover the latest laptops for work, creativity, and gaming.',
         link: 'https://amzn.to/3UzeeJK', // Hero slide link
