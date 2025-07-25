@@ -11,11 +11,11 @@ const heroSlides = [
     },
     {
         id: 'hero2',
-        imageUrl: 'imagesjpg',
+        imageUrl: 'https://m.media-amazon.com/images/I/71GHkbNQdDL._AC_SL1500_.jpg',
         title: 'Capture Every Moment',
         description: 'Explore our range of powerful smartphones with cutting-edge cameras.',
         link: 'https://amzn.to/4fbAByC',
-        linkText: 'Shoones'
+        linkText: 'Shop Smart Phones'
     },
     {
         id: 'hero3',
