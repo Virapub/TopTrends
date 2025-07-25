@@ -46,7 +46,7 @@ const products = [
             OS: 'Windows 11 Home',
             Battery: '86WHr'
         },
-        amazonLink: 'https://amzn.to/your-dell-xps-15-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        amazonLink: 'https://amzn.to/4o3mCie', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
         relatedProducts: ['prod102', 'prod103', 'prod201']
     },
     {
