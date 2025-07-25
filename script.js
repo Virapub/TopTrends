@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Function to get user's country using IPinfo API
     async function getUserCountry() {
         try {
-            const response = await fetch(`{curl https://api.ipinfo.io/lite/8.8.8.8?token=13425fe40bc709}`);
+            const response = await fetch(`https://api.ipinfo.io/json?token=${IPINFO_API_TOKEN}`);
             if (!response.ok) {
                 console.error('IPinfo API error:', response.status, response.statusText);
                 if (response.status === 401) {
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         try {
-            const url = `https://api.currencyfreaks.com/latest?apikey=${1a708b2b7f5342599aa5484b757e4e83}&symbols=${toCurrency}&base=${fromCurrency}`;
+            const url = `https://api.currencyfreaks.com/latest?apikey=${CURRENCY_API_KEY}&symbols=${toCurrency}&base=${fromCurrency}`;
             const response = await fetch(url);
             if (!response.ok) {
                 console.error(`Error fetching exchange rate from ${fromCurrency} to ${toCurrency}:`, response.status, response.statusText);
@@ -641,4 +641,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     await getUserCountry(); // Await country detection
     await initializeSite(); // Await full site initialization
 });
-
