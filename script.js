@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Function to get user's country using IPinfo API
     async function getUserCountry() {
         try {
-            const response = await fetch(`https://ipinfo.io/json?token=${IPINFO_API_TOKEN}`);
+            const response = await fetch(`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}`);
             if (!response.ok) {
                 console.error('IPinfo API error:', response.status, response.statusText);
                 if (response.status === 401) {
