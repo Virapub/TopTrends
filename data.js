@@ -50,7 +50,7 @@ const products = [
             baseCurrency: 'USD',
             originalBasePrice: 1700 // Original Price in USD
         },
-        amazonLink: 'https://amzn.to/your-dell-xps-15-affiliate-link-here',
+        amazonLink: 'https://amzn.to/44L6ISa',
         relatedProducts: ['prod102', 'prod103', 'prod201']
     },
     {
