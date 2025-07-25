@@ -6,24 +6,24 @@ const heroSlides = [
         imageUrl: 'https://m.media-amazon.com/images/I/51Yi2aZ218L._AC_SL1000_.jpg',
         title: 'Unleash Your Potential',
         description: 'Discover the latest laptops for work, creativity, and gaming.',
-        link: 'mmmmmmmmmmmmm', // Will be handled by JS to show specific category or product
+        link: 'https://amzn.to/3TZ6tN9', // Will be handled by JS to show specific category or product
         linkText: 'Shop Laptops'
     },
     {
         id: 'hero2',
-        imageUrl: 'images/hero-slide-2.jpg',
+        imageUrl: 'imagesjpg',
         title: 'Capture Every Moment',
         description: 'Explore our range of powerful smartphones with cutting-edge cameras.',
         link: '#',
-        linkText: 'Shop Smartphones'
+        linkText: 'Shoones'
     },
     {
         id: 'hero3',
-        imageUrl: 'images/hero-slide-3.jpg',
+        imageUrl: 'imagespg',
         title: 'Game On, Anywhere',
         description: 'Elevate your gaming experience with our top-tier gaming accessories.',
         link: '#',
-        linkText: 'Explore Gaming'
+        linkText: 'ExploreGaming'
     }
 ];
 
