@@ -14,7 +14,7 @@ const heroSlides = [
         imageUrl: 'imagesjpg',
         title: 'Capture Every Moment',
         description: 'Explore our range of powerful smartphones with cutting-edge cameras.',
-        link: '#',
+        link: 'https://amzn.to/4fbAByC',
         linkText: 'Shoones'
     },
     {
