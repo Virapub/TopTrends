@@ -3,10 +3,10 @@
 const heroSlides = [
     {
         id: 'hero1',
-        imageUrl: 'images/hero-slide-1.jpg',
+        imageUrl: 'https://m.media-amazon.com/images/I/51Yi2aZ218L._AC_SL1000_.jpg',
         title: 'Unleash Your Potential',
         description: 'Discover the latest laptops for work, creativity, and gaming.',
-        link: 'https://m.media-amazon.com/images/I/51Yi2aZ218L._AC_SL1000_.jpg', // Will be handled by JS to show specific category or product
+        link: 'mmmmmmmmmmmmm', // Will be handled by JS to show specific category or product
         linkText: 'Shop Laptops'
     },
     {
