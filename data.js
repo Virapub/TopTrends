@@ -34,7 +34,7 @@ const products = [
         description: 'Experience stunning visuals and powerful performance with the Dell XPS 15. Featuring an Intel Core i7 processor, 16GB RAM, and a 512GB SSD. Ideal for professionals and creatives.',
         price: '₹1,20,000',
         originalPrice: '₹1,35,000',
-        imageUrl: 'images/product-laptop-1.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'https://m.media-amazon.com/images/I/61Ks9X44eVL._AC_SL1181_.jpg', // Ensure this image exists in your 'images' folder
         category: 'laptops',
         availability: 'Global', // Global for laptops, smartphones etc.
         specifications: {
