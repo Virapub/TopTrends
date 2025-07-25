@@ -32,7 +32,7 @@ const products = [
         id: 'prod101',
         name: 'Dell XPS 15 Laptop',
         description: 'Experience stunning visuals and powerful performance with the Dell XPS 15. Featuring an Intel Core i7 processor, 16GB RAM, and a 512GB SSD. Ideal for professionals and creatives.',
-        imageUrl: 'images/product-laptop-1.jpg',
+        imageUrl: 'https://m.media-amazon.com/images/I/61Ks9X44eVL._AC_SL1181_.jpg',
         category: 'laptops',
         availability: 'Global', // Product is generally available globally. Price depends on region.
         specifications: {
@@ -46,9 +46,9 @@ const products = [
         },
         // Base price in USD for conversion
         prices: {
-            basePrice: 1500, // Price in USD
+            basePrice: 1972, // Price in USD
             baseCurrency: 'USD',
-            originalBasePrice: 1700 // Original Price in USD
+            originalBasePrice: 2022 // Original Price in USD
         },
         amazonLink: 'https://amzn.to/44L6ISa',
         relatedProducts: ['prod102', 'prod103', 'prod201']
