@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         try {
             // CORRECTED: Use the CURRENCY_API_KEY constant here
-            const url = `https://api.currencyfreaks.com/latest?apikey=${CURRENCY_API_KEY}&symbols=${toCurrency}&base=${fromCurrency}`;
+            const url = `https://api.currencyfreaks.com/latest?apikey=${1a708b2b7f5342599aa5484b757e4e83}&symbols=${toCurrency}&base=${fromCurrency}`;
             const response = await fetch(url);
             if (!response.ok) {
                 console.error(`Error fetching exchange rate from ${fromCurrency} to ${toCurrency}:`, response.status, response.statusText);
