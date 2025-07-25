@@ -1,3 +1,4 @@
+Yeh code sahi hai kya dekho.
 // script.js
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const startComparisonBtn = document.getElementById('start-comparison-btn');
     const comparisonTableContainer = document.getElementById('comparison-table-container');
     const comparisonTable = document.getElementById('comparison-table');
-    const clearComparisonBtn = document('clear-comparison-btn'); // Typo: Should be getElementById
+    const clearComparisonBtn = document.getElementById('clear-comparison-btn');
     const backFromCompareButton = document.getElementById('backFromCompare');
     const compareCountSelectionSpan = document.getElementById('compare-count-selection');
 
@@ -70,8 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Function to get user's country using IPinfo API
     async function getUserCountry() {
         try {
-            // CORRECTED: Use the IPINFO_API_TOKEN constant in the correct URL format
-            const response = await fetch(`https://ipinfo.io/json?token=${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}`);
+            const response = await fetch(`{curl https://api.ipinfo.io/lite/8.8.8.8?token=13425fe40bc709}`);
             if (!response.ok) {
                 console.error('IPinfo API error:', response.status, response.statusText);
                 if (response.status === 401) {
@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         try {
-            // CORRECTED: Use the CURRENCY_API_KEY constant here
             const url = `https://api.currencyfreaks.com/latest?apikey=${1a708b2b7f5342599aa5484b757e4e83}&symbols=${toCurrency}&base=${fromCurrency}`;
             const response = await fetch(url);
             if (!response.ok) {
@@ -643,5 +642,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     await getUserCountry(); // Await country detection
     await initializeSite(); // Await full site initialization
 });
-
 
