@@ -6,7 +6,7 @@ const heroSlides = [
         imageUrl: 'https://m.media-amazon.com/images/I/51Yi2aZ218L._AC_SL1000_.jpg',
         title: 'Unleash Your Potential',
         description: 'Discover the latest laptops for work, creativity, and gaming.',
-        link: 'https://amzn.to/3TZ6tN9', // Will be handled by JS to show specific category or product
+        link: 'https://amzn.to/3TZ6tN9', // Hero slide link
         linkText: 'Shop Laptops'
     },
     {
@@ -32,11 +32,9 @@ const products = [
         id: 'prod101',
         name: 'Dell XPS 15 Laptop',
         description: 'Experience stunning visuals and powerful performance with the Dell XPS 15. Featuring an Intel Core i7 processor, 16GB RAM, and a 512GB SSD. Ideal for professionals and creatives.',
-        price: '$1,972.00',
-        originalPrice: '$2,022.00',
-        imageUrl: 'https://m.media-amazon.com/images/I/61Ks9X44eVL._AC_SL1181_.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-laptop-1.jpg',
         category: 'laptops',
-        availability: 'Global', // Global for laptops, smartphones etc.
+        availability: 'Global', // Product is generally available globally. Price depends on region.
         specifications: {
             Processor: 'Intel Core i7-12700H',
             RAM: '16GB DDR4',
@@ -46,16 +44,20 @@ const products = [
             OS: 'Windows 11 Home',
             Battery: '86WHr'
         },
-        amazonLink: 'https://amzn.to/4o3mCie', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        // Base price in USD for conversion
+        prices: {
+            basePrice: 1500, // Price in USD
+            baseCurrency: 'USD',
+            originalBasePrice: 1700 // Original Price in USD
+        },
+        amazonLink: 'https://amzn.to/your-dell-xps-15-affiliate-link-here',
         relatedProducts: ['prod102', 'prod103', 'prod201']
     },
     {
         id: 'prod102',
         name: 'HP Spectre x360 14',
         description: 'A versatile 2-in-1 laptop with a premium design and stunning OLED display. Perfect for productivity and entertainment. Intel Core i7, 16GB RAM, 1TB SSD.',
-        price: '₹1,10,000',
-        originalPrice: '₹1,25,000',
-        imageUrl: 'images/product-laptop-2.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-laptop-2.jpg',
         category: 'laptops',
         availability: 'Global',
         specifications: {
@@ -67,16 +69,19 @@ const products = [
             OS: 'Windows 11 Home',
             Battery: '66WHr'
         },
-        amazonLink: 'https://amzn.to/your-hp-spectre-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 1400,
+            baseCurrency: 'USD',
+            originalBasePrice: 1600
+        },
+        amazonLink: 'https://amzn.to/your-hp-spectre-affiliate-link-here',
         relatedProducts: ['prod101', 'prod103', 'prod202']
     },
     {
         id: 'prod103',
         name: 'Apple MacBook Air M2',
         description: 'The redesigned MacBook Air with the M2 chip delivers incredible performance and all-day battery life. Super thin and light, perfect for on-the-go productivity.',
-        price: '₹95,000',
-        originalPrice: '₹1,05,000',
-        imageUrl: 'images/product-laptop-3.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-laptop-3.jpg',
         category: 'laptops',
         availability: 'Global',
         specifications: {
@@ -88,16 +93,19 @@ const products = [
             OS: 'macOS',
             Battery: '18 hours'
         },
-        amazonLink: 'https://amzn.to/your-macbook-air-m2-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 1199,
+            baseCurrency: 'USD',
+            originalBasePrice: 1299
+        },
+        amazonLink: 'https://amzn.to/your-macbook-air-m2-affiliate-link-here',
         relatedProducts: ['prod203', 'prod301', 'prod302']
     },
     {
         id: 'prod201',
         name: 'iPhone 15 Pro Max',
         description: 'The latest flagship iPhone with the A17 Bionic chip, pro camera system, and a stunning Super Retina XDR display. Experience next-level mobile photography and gaming.',
-        price: '₹1,40,000',
-        originalPrice: '₹1,50,000',
-        imageUrl: 'images/product-smartphone-1.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-smartphone-1.jpg',
         category: 'smartphones',
         availability: 'Global',
         specifications: {
@@ -108,16 +116,19 @@ const products = [
             Battery: 'Up to 29 hours video playback',
             OS: 'iOS'
         },
-        amazonLink: 'https://amzn.to/your-iphone-15-pro-max-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 1200,
+            baseCurrency: 'USD',
+            originalBasePrice: 1300
+        },
+        amazonLink: 'https://amzn.to/your-iphone-15-pro-max-affiliate-link-here',
         relatedProducts: ['prod202', 'prod203', 'prod303']
     },
     {
         id: 'prod202',
         name: 'Samsung Galaxy S24 Ultra',
         description: 'Unleash epic with Galaxy AI. The S24 Ultra features a powerful Snapdragon processor, stunning display, and advanced camera capabilities.',
-        price: '₹1,30,000',
-        originalPrice: '₹1,45,000',
-        imageUrl: 'images/product-smartphone-2.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-smartphone-2.jpg',
         category: 'smartphones',
         availability: 'Global',
         specifications: {
@@ -128,16 +139,19 @@ const products = [
             Battery: '5000 mAh',
             OS: 'Android'
         },
-        amazonLink: 'https://amzn.to/your-galaxy-s24-ultra-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 1150,
+            baseCurrency: 'USD',
+            originalBasePrice: 1250
+        },
+        amazonLink: 'https://amzn.to/your-galaxy-s24-ultra-affiliate-link-here',
         relatedProducts: ['prod201', 'prod203', 'prod304']
     },
     {
         id: 'prod203',
         name: 'Google Pixel 8 Pro',
         description: 'The Pixel 8 Pro with Google Tensor G3 is built for AI, bringing you smarter features for photos, videos, and daily tasks. Stunning display and incredible camera.',
-        price: '₹90,000',
-        originalPrice: '₹1,00,000',
-        imageUrl: 'images/product-smartphone-3.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-smartphone-3.jpg',
         category: 'smartphones',
         availability: 'Global',
         specifications: {
@@ -148,16 +162,19 @@ const products = [
             Battery: '5050 mAh',
             OS: 'Android'
         },
-        amazonLink: 'https://amzn.to/your-pixel-8-pro-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 900,
+            baseCurrency: 'USD',
+            originalBasePrice: 1000
+        },
+        amazonLink: 'https://amzn.to/your-pixel-8-pro-affiliate-link-here',
         relatedProducts: ['prod201', 'prod202', 'prod305']
     },
     {
         id: 'prod301',
         name: 'Logitech MX Master 3S Mouse',
         description: 'The ultimate performance mouse. Work with precision and speed across multiple devices. Silent clicks and an 8000 DPI sensor.',
-        price: '₹8,500',
-        originalPrice: '₹9,500',
-        imageUrl: 'images/product-accessory-1.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-accessory-1.jpg',
         category: 'accessories',
         availability: 'Global',
         specifications: {
@@ -167,16 +184,19 @@ const products = [
             Battery: '70 days on full charge',
             Compatibility: 'Windows, macOS, Linux, Chrome OS, iPadOS'
         },
-        amazonLink: 'https://amzn.to/your-logitech-mx-master-3s-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 99,
+            baseCurrency: 'USD',
+            originalBasePrice: 110
+        },
+        amazonLink: 'https://amzn.to/your-logitech-mx-master-3s-affiliate-link-here',
         relatedProducts: ['prod101', 'prod102', 'prod302']
     },
     {
         id: 'prod302',
         name: 'Sony WH-1000XM5 Headphones',
         description: 'Industry-leading noise canceling headphones with crystal-clear call quality. Experience immersive sound and supreme comfort.',
-        price: '₹26,000',
-        originalPrice: '₹30,000',
-        imageUrl: 'images/product-audio-1.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-audio-1.jpg',
         category: 'audio',
         availability: 'Global',
         specifications: {
@@ -186,16 +206,19 @@ const products = [
             Weight: '250g',
             Features: 'Speak-to-Chat, DSEE Extreme'
         },
-        amazonLink: 'https://amzn.to/your-sony-wh-1000xm5-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 349,
+            baseCurrency: 'USD',
+            originalBasePrice: 399
+        },
+        amazonLink: 'https://amzn.to/your-sony-wh-1000xm5-affiliate-link-here',
         relatedProducts: ['prod201', 'prod202', 'prod301']
     },
     {
         id: 'prod303',
         name: 'Razer BlackWidow V4 Pro',
         description: 'A full-featured gaming keyboard with Razer Chroma RGB, customizable macro keys, and responsive mechanical switches. Dominate your opponents.',
-        price: '₹18,000',
-        originalPrice: '₹20,000',
-        imageUrl: 'images/product-gaming-1.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-gaming-1.jpg',
         category: 'gaming',
         availability: 'Global',
         specifications: {
@@ -205,16 +228,19 @@ const products = [
             Connectivity: 'Wired (USB-C)',
             Features: 'Media Keys, Macro Keys, Wrist Rest'
         },
-        amazonLink: 'https://amzn.to/your-razer-blackwidow-v4-pro-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 229,
+            baseCurrency: 'USD',
+            originalBasePrice: 250
+        },
+        amazonLink: 'https://amzn.to/your-razer-blackwidow-v4-pro-affiliate-link-here',
         relatedProducts: ['prod401', 'prod402', 'prod304']
     },
     {
         id: 'prod304',
         name: 'Samsung T7 Shield Portable SSD 1TB',
         description: 'Rugged and super-fast portable SSD. With IP65 rating for dust and water resistance, it’s built for the outdoors. Transfer large files in seconds.',
-        price: '₹10,000',
-        originalPrice: '₹12,000',
-        imageUrl: 'images/product-accessory-2.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-accessory-2.jpg',
         category: 'accessories',
         availability: 'Global',
         specifications: {
@@ -225,16 +251,19 @@ const products = [
             Durability: 'IP65 Water/Dust Resistant, 3-meter drop resistant',
             Compatibility: 'PC, Mac, Android, Gaming Consoles'
         },
-        amazonLink: 'https://amzn.to/your-samsung-t7-shield-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 100,
+            baseCurrency: 'USD',
+            originalBasePrice: 120
+        },
+        amazonLink: 'https://amzn.to/your-samsung-t7-shield-affiliate-link-here',
         relatedProducts: ['prod101', 'prod102', 'prod201']
     },
     {
         id: 'prod305',
         name: 'JBL Flip 6 Portable Speaker',
         description: 'Bold sound for every adventure. The JBL Flip 6 delivers powerful JBL Original Pro Sound with exceptional clarity. IP67 waterproof and dustproof.',
-        price: '₹9,000',
-        originalPrice: '₹10,000',
-        imageUrl: 'images/product-audio-2.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-audio-2.jpg',
         category: 'audio',
         availability: 'Global',
         specifications: {
@@ -244,16 +273,19 @@ const products = [
             PowerOutput: '30W RMS',
             Features: 'PartyBoost, USB-C Charging'
         },
-        amazonLink: 'https://amzn.to/your-jbl-flip-6-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 110,
+            baseCurrency: 'USD',
+            originalBasePrice: 130
+        },
+        amazonLink: 'https://amzn.to/your-jbl-flip-6-affiliate-link-here',
         relatedProducts: ['prod202', 'prod203', 'prod302']
     },
     {
         id: 'prod401',
         name: 'Logitech G PRO X SUPERLIGHT Mouse',
         description: 'Our lightest PRO mouse ever. Engineered with the pros, it weighs less than 63 grams for ultra-fast, responsive gaming.',
-        price: '₹12,500',
-        originalPrice: '₹14,000',
-        imageUrl: 'images/product-gaming-2.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-gaming-2.jpg',
         category: 'gaming',
         availability: 'Global',
         specifications: {
@@ -263,16 +295,19 @@ const products = [
             BatteryLife: 'Up to 70 hours',
             Buttons: '5 programmable'
         },
-        amazonLink: 'https://amzn.to/your-logitech-g-pro-x-superlight-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 159,
+            baseCurrency: 'USD',
+            originalBasePrice: 179
+        },
+        amazonLink: 'https://amzn.to/your-logitech-g-pro-x-superlight-affiliate-link-here',
         relatedProducts: ['prod303', 'prod402', 'prod103']
     },
     {
         id: 'prod402',
         name: 'HyperX QuadCast S Microphone',
         description: 'A superb USB condenser microphone with stunning RGB lighting and four polar patterns. Perfect for streaming, gaming, and podcasting.',
-        price: '₹14,000',
-        originalPrice: '₹16,000',
-        imageUrl: 'images/product-gaming-3.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-gaming-3.jpg',
         category: 'gaming',
         availability: 'Global',
         specifications: {
@@ -281,16 +316,19 @@ const products = [
             Features: 'Anti-Vibration Shock Mount, Pop Filter, Gain Control',
             Connectivity: 'USB-C'
         },
-        amazonLink: 'https://amzn.to/your-hyperx-quadcast-s-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 149,
+            baseCurrency: 'USD',
+            originalBasePrice: 170
+        },
+        amazonLink: 'https://amzn.to/your-hyperx-quadcast-s-affiliate-link-here',
         relatedProducts: ['prod303', 'prod401', 'prod305']
     },
     {
         id: 'prod501',
         name: 'Bose QuietComfort Earbuds II',
         description: 'Breakthrough noise cancellation and custom-tuned sound. These earbuds intelligently personalizes the sound and silence to your ears.',
-        price: '₹24,000',
-        originalPrice: '₹26,000',
-        imageUrl: 'images/product-audio-3.jpg', // Ensure this image exists in your 'images' folder
+        imageUrl: 'images/product-audio-3.jpg',
         category: 'audio',
         availability: 'Global',
         specifications: {
@@ -300,9 +338,12 @@ const products = [
             Features: 'Aware Mode, CustomFit',
             WaterResistance: 'IPX4'
         },
-        amazonLink: 'https://amzn.to/your-bose-qc-earbuds-ii-affiliate-link-here', // <-- REPLACE WITH YOUR ACTUAL AMAZON LINK
+        prices: {
+            basePrice: 279,
+            baseCurrency: 'USD',
+            originalBasePrice: 299
+        },
+        amazonLink: 'https://amzn.to/your-bose-qc-earbuds-ii-affiliate-link-here',
         relatedProducts: ['prod302', 'prod305', 'prod203']
     }
 ];
-
-
