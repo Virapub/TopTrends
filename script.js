@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function getUserCountry() {
         try {
             // CORRECTED: Use the IPINFO_API_TOKEN constant in the correct URL format
-            const response = await fetch(`https://ipinfo.io/json?token=${IPINFO_API_TOKEN}`);
+            const response = await fetch(`https://ipinfo.io/json?token=${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}`);
             if (!response.ok) {
                 console.error('IPinfo API error:', response.status, response.statusText);
                 if (response.status === 401) {
