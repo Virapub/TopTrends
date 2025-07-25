@@ -1,4 +1,3 @@
-Yeh code sahi hai kya dekho.
 // script.js
 
 document.addEventListener('DOMContentLoaded', async () => {
