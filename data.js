@@ -32,7 +32,7 @@ const products = [
         id: 'prod101',
         name: 'Dell XPS 15 Laptop',
         description: 'Experience stunning visuals and powerful performance with the Dell XPS 15. Featuring an Intel Core i7 processor, 16GB RAM, and a 512GB SSD. Ideal for professionals and creatives.',
-        price: '₹1,20,000',
+        price: '$2,022.00',
         originalPrice: '₹1,35,000',
         imageUrl: 'https://m.media-amazon.com/images/I/61Ks9X44eVL._AC_SL1181_.jpg', // Ensure this image exists in your 'images' folder
         category: 'laptops',
