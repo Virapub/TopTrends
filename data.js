@@ -22,7 +22,7 @@ const heroSlides = [
         imageUrl: 'imagespg',
         title: 'Game On, Anywhere',
         description: 'Elevate your gaming experience with our top-tier gaming accessories.',
-        link: '#',
+        link: 'https://amzn.to/45ja134',
         linkText: 'ExploreGaming'
     }
 ];
