@@ -19,11 +19,11 @@ const heroSlides = [
     },
     {
         id: 'hero3',
-        imageUrl: 'imagespg',
+        imageUrl: 'https://m.media-amazon.com/images/I/71o3sNsP+oL._AC_SL1500_.jpg',
         title: 'Game On, Anywhere',
         description: 'Elevate your gaming experience with our top-tier gaming accessories.',
         link: 'https://amzn.to/45ja134',
-        linkText: 'ExploreGaming'
+        linkText: 'Explore Gaming'
     }
 ];
 
