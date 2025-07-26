@@ -68,7 +68,7 @@ const productsData = [
         longDescription: '3S Fast Heating, 212-842℉, Pre-set 3 Groups Temperature, 6 F245 Soldering Tips, Smart Soldering Iron Pen for Electronics Repair.',        
         priceUSD: 79.99,
         images: [
-            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop',
+            'https://m.media-amazon.com/images/I/71L1GEcgZJL._AC_SL1500_.jpg',
             'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop',
             'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&h=400&fit=crop'
         ],
