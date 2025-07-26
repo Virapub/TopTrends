@@ -36,7 +36,7 @@ const productsData = [
         category: 'electronics wearable trending',
         shortDescription: 'Advanced fitness tracking with health monitoring.',
         longDescription: 'The ultimate smartwatch with comprehensive health monitoring, GPS tracking, and 7-day battery life. Features include heart rate monitoring, sleep tracking, blood oxygen measurement, and over 100 workout modes. Water-resistant up to 50 meters.',
-        priceUSD: 299.99,
+        priceUSD: 125.99,
         images: [
             'https://m.media-amazon.com/images/I/711L1d8E28L._AC_SX679_.jpg',
             'https://m.media-amazon.com/images/I/71kowwg4DOL._AC_SL1500_.jpg',
