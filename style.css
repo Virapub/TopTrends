@@ -196,7 +196,7 @@ h2::after {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 10px;
 }
 
 .main-nav .nav-links a {
