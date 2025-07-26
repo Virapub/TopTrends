@@ -39,7 +39,7 @@ const productsData = [
         priceUSD: 299.99,
         images: [
             'https://m.media-amazon.com/images/I/711L1d8E28L._AC_SX679_.jpg',
-            'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=400&fit=crop',
+            'https://m.media-amazon.com/images/I/71kowwg4DOL._AC_SL1500_.jpg',
             'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&h=400&fit=crop'
         ],
         affiliateLink: 'https://amzn.to/4mcIIgu'
