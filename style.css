@@ -194,7 +194,7 @@ h2::after {
 }
 
 .nav-links {
-    list-style: none;
+    list-style: inline;
     display: flex;
     gap: 10px;
 }
