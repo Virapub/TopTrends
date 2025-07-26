@@ -66,7 +66,7 @@ const productsData = [
         category: '100W Portable Corded Soldering Iron Kit',
         shortDescription: 'AI-powered lamp adapts to your mood.',
         longDescription: '3S Fast Heating, 212-842℉, Pre-set 3 Groups Temperature, 6 F245 Soldering Tips, Smart Soldering Iron Pen for Electronics Repair.',        
-        priceUSD: 79.99,
+        priceUSD: 119.99,
         images: [
             'https://m.media-amazon.com/images/I/71L1GEcgZJL._AC_SL1500_.jpg',
             'https://m.media-amazon.com/images/I/71RmqP1PFdL._AC_SX679_.jpg',
