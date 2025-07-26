@@ -8,13 +8,13 @@ const productsData = [
         category: 'electronics new-arrivals highly-rated',
         shortDescription: 'Self-healing screen protector for any device.',
         longDescription: 'The revolutionary self-healing screen protector that adapts to any device screen. Say goodbye to scratches and cracks with this durable, clear shield. Easy to apply and virtually invisible. Provides edge-to-edge protection and maintains touch sensitivity. Made with advanced nano-technology that repairs minor scratches automatically.',
-        priceUSD: 29.99,
+        priceUSD: 115.99,
         images: [
             'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=600&h=400&fit=crop',
             'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=600&h=400&fit=crop',
             'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop'
         ],
-        affiliateLink: 'https://flexiscreenpro.example.com/buy'
+        affiliateLink: 'https://amzn.to/4fhuo4k'
     },
     {
         id: 2,
