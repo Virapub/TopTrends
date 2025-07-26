@@ -54,7 +54,7 @@ const productsData = [
         images: [
             'https://m.media-amazon.com/images/I/61nqvRpRnnL.__AC_SX300_SY300_QL70_FMwebp_.jpg',
             'https://m.media-amazon.com/images/I/61DjKwluHlL._AC_SL1500_.jpg',
-            'https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?w=600&h=400&fit=crop'
+            'https://m.media-amazon.com/images/I/71G2YhxK6zL._AC_SL1500_.jpg'
         ],
         affiliateLink: 'https://amzn.to/4mfe1Yi'
     },
