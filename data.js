@@ -22,9 +22,9 @@ const productsData = [
         category: 'electronics audio new-arrivals highly-rated',
         shortDescription: 'Premium wireless earbuds with noise cancellation.',
         longDescription: 'Experience audio like never before with the Quantum Leap Earbuds. Featuring advanced active noise cancellation, crystal-clear call quality, and a sleek ergonomic design. Enjoy up to 24-hour battery life with the charging case. Perfect for music lovers, professionals, and fitness enthusiasts.',
-        priceUSD: 129.99,
+        priceUSD: 164.95,
         images: [
-            'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=400&fit=crop',
+            'https://m.media-amazon.com/images/I/717VEJ7qTZL._AC_SY355_.jpg',
             'https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=600&h=400&fit=crop',
             'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop'
         ],
