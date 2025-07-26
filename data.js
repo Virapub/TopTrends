@@ -52,7 +52,7 @@ const productsData = [
         longDescription: 'Charge your phone, earbuds, and smartwatch simultaneously with this sleek 3-in-1 wireless charging station. Features fast charging technology, LED indicators, and a compact design that fits perfectly on any desk or nightstand.',
         priceUSD: 79.99,
         images: [
-            'https://images.unsplash.com/photo-1609592806596-4d3b0c5b1e7e?w=600&h=400&fit=crop',
+            'https://m.media-amazon.com/images/I/61nqvRpRnnL.__AC_SX300_SY300_QL70_FMwebp_.jpg',
             'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
             'https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?w=600&h=400&fit=crop'
         ],
