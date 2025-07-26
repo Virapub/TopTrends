@@ -189,7 +189,11 @@ h2::after {
     text-decoration: none;
 }
 
-.main-nav .nav-links {
+.main-nav {
+    display: flex;
+}
+
+.nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
