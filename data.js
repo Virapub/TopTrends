@@ -28,7 +28,7 @@ const productsData = [
             'https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=600&h=400&fit=crop',
             'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop'
         ],
-        affiliateLink: 'https://quantumleapearbuds.example.com/buy'
+        affiliateLink: 'https://amzn.to/3Utu2Oi'
     },
     {
         id: 3,
