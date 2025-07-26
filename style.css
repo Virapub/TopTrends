@@ -198,7 +198,7 @@ h2::after {
 .main-nav .nav-links a {
     color: var(--light-text);
     font-weight: 400;
-    position: inline;
+    position: inline-flex;
     padding: 10px 0;
     transition: var(--transition);
     text-decoration: none;
