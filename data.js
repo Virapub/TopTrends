@@ -62,8 +62,8 @@ const productsData = [
     // Home & Living Category
     {
         id: 5,
-        name: 'Aura Mood Lamp',
-        category: 'home-living smart-home trending',
+        name: '100W Portable Corded Soldering Iron Kit',
+        category: '100W Portable Corded Soldering Iron Kit',
         shortDescription: 'AI-powered lamp adapts to your mood.',
         longDescription: 'An AI-powered smart lamp that senses your mood and adjusts its lighting to create the perfect ambiance. Syncs with music and smart home devices. Offers over 16 million colors and customizable light patterns for every occasion. Voice control compatible.',
         priceUSD: 79.99,
