@@ -26,7 +26,7 @@ const productsData = [
         images: [
             'https://m.media-amazon.com/images/I/717VEJ7qTZL._AC_SY355_.jpg',
             'https://m.media-amazon.com/images/I/81n9TujDe3L._AC_SL1500_.jpg',
-            'https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop'
+            'https://m.media-amazon.com/images/I/61k7YkwzhUL._AC_SL1500_.jpg'
         ],
         affiliateLink: 'https://amzn.to/3Utu2Oi'
     },
