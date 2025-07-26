@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const featuredOriginalPrice = document.querySelector('.featured-gadget-card .original-price');
     const featuredAddToCartBtn = document.querySelector('.add-to-cart-featured');
 
+    // --- NEW: Products to showcase on homepage ---
+    // Yahan un products ki IDs dalein jinhein aap homepage par dikhana chahte hain.
+    // Aap apni pasand ke hisaab se IDs badal sakte hain.
+    const showcaseProductIds = [1, 2, 4, 6]; // Example: FlexiScreen Pro, Aura Mood Lamp, PetPal Companion, Smart AeroGarden
+    // Agar aap randomly products dikhana chahte hain, toh yeh logic change kar sakte hain.
 
     // --- Helper Functions ---
     const formatPrice = (priceUSD) => {
@@ -106,11 +111,22 @@ document.addEventListener('DOMContentLoaded', () => {
         return card;
     };
 
-    // Function to populate the product grid
-    const populateProductGrid = () => {
+    // --- MODIFIED: Function to populate the product grid (only showcase products) ---
+    const populateProductGrid = (filter = 'all') => {
         gadgetGrid.innerHTML = ''; // Clear existing cards
-        productsData.forEach(product => {
+        
+        // Filter products based on showcaseProductIds for the initial load
+        const productsToDisplay = productsData.filter(product => showcaseProductIds.includes(product.id));
+
+        productsToDisplay.forEach(product => {
             const card = createProductCard(product);
+            // Apply initial filter if any specific filter is active on load (though usually 'all' for homepage)
+            const categories = card.dataset.category.split(' ');
+            if (filter === 'all' || categories.includes(filter)) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
             gadgetGrid.appendChild(card);
         });
 
@@ -297,7 +313,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- Interactive Filters ---
+    // --- MODIFIED: Interactive Filters (now filters only the showcased products) ---
+    // If you want filter buttons to show ALL products, you'll need a separate "All Products" page
+    // or modify this logic to load all products when a filter is clicked, and then hide them again
+    // when returning to the homepage. For simplicity, this currently filters only the showcased ones.
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             const filter = button.dataset.filter;
@@ -305,7 +324,8 @@ document.addEventListener('DOMContentLoaded', () => {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
-            document.querySelectorAll('.gadget-card').forEach(card => { // Select all gadget cards
+            // Filter only the *currently displayed* products
+            document.querySelectorAll('.gadget-card').forEach(card => {
                 const categories = card.dataset.category.split(' ');
                 if (filter === 'all' || categories.includes(filter)) {
                     card.style.display = 'flex';
@@ -390,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // Initial population of products and price update
-    populateProductGrid();
+    // Initial population of products (only showcase products) and price update
+    populateProductGrid(); // This will now only display products from showcaseProductIds
     updateAllPrices(); // Ensure prices are correct on load, especially for featured product
 });
