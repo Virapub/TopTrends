@@ -42,7 +42,7 @@ const productsData = [
             'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=400&fit=crop',
             'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&h=400&fit=crop'
         ],
-        affiliateLink: 'https://smartwatchpromax.example.com/buy'
+        affiliateLink: 'https://amzn.to/4mcIIgu'
     },
     {
         id: 4,
