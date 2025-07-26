@@ -3,621 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechHaven - The Ultimate Online Tech Hub</title>
-    <meta name="description" content="Discover the latest technology products at TechHaven. Shop laptops, smartphones, gaming gear, smart home devices, and more with fast shipping and expert support.">
+    <title>InnoGadget Hub - Innovative & Quirky Gadgets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@404,600,700&family=Poppins:wght@300,400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header-content">
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="#home">
-                        <i class="fas fa-microchip"></i>
-                        <span>TechHaven</span>
-                    </a>
-                </div>
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
 
-                <!-- Navigation -->
-                <nav class="nav" id="nav">
-                    <ul class="nav-list">
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">
-                                Laptops <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-content">
-                                    <div class="dropdown-column">
-                                        <h4>Gaming</h4>
-                                        <a href="#">Gaming Laptops</a>
-                                        <a href="#">Gaming Accessories</a>
-                                        <a href="#">VR Ready</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h4>Ultrabooks</h4>
-                                        <a href="#">Business Ultrabooks</a>
-                                        <a href="#">Student Laptops</a>
-                                        <a href="#">2-in-1 Convertibles</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h4>Workstations</h4>
-                                        <a href="#">Professional Workstations</a>
-                                        <a href="#">Creative Workstations</a>
-                                        <a href="#">Mobile Workstations</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">
-                                Smartphones <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-content">
-                                    <div class="dropdown-column">
-                                        <h4>Android</h4>
-                                        <a href="#">Samsung Galaxy</a>
-                                        <a href="#">Google Pixel</a>
-                                        <a href="#">OnePlus</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h4>iOS</h4>
-                                        <a href="#">iPhone 15 Series</a>
-                                        <a href="#">iPhone 14 Series</a>
-                                        <a href="#">iPhone SE</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h4>Refurbished</h4>
-                                        <a href="#">Certified Refurbished</a>
-                                        <a href="#">Open Box</a>
-                                        <a href="#">Trade-in Program</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">
-                                Gaming <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-content">
-                                    <div class="dropdown-column">
-                                        <h4>Consoles</h4>
-                                        <a href="#">PlayStation 5</a>
-                                        <a href="#">Xbox Series X/S</a>
-                                        <a href="#">Nintendo Switch</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h4>PC Gaming</h4>
-                                        <a href="#">Gaming PCs</a>
-                                        <a href="#">Graphics Cards</a>
-                                        <a href="#">Gaming Monitors</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h4>Accessories</h4>
-                                        <a href="#">Gaming Keyboards</a>
-                                        <a href="#">Gaming Mice</a>
-                                        <a href="#">Gaming Headsets</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">
-                                Smart Home <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-content">
-                                    <div class="dropdown-column">
-                                        <h4>Security</h4>
-                                        <a href="#">Security Cameras</a>
-                                        <a href="#">Smart Doorbells</a>
-                                        <a href="#">Smart Locks</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h4>Automation</h4>
-                                        <a href="#">Smart Speakers</a>
-                                        <a href="#">Smart Lighting</a>
-                                        <a href="#">Smart Thermostats</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h4>Entertainment</h4>
-                                        <a href="#">Smart TVs</a>
-                                        <a href="#">Streaming Devices</a>
-                                        <a href="#">Sound Systems</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">
-                                Audio <i class="fas fa-chevron-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <div class="dropdown-content">
-                                    <div class="dropdown-column">
-                                        <h4>Headphones</h4>
-                                        <a href="#">Wireless Earbuds</a>
-                                        <a href="#">Over-Ear Headphones</a>
-                                        <a href="#">Noise Cancelling</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h4>Speakers</h4>
-                                        <a href="#">Bluetooth Speakers</a>
-                                        <a href="#">Smart Speakers</a>
-                                        <a href="#">Soundbars</a>
-                                    </div>
-                                    <div class="dropdown-column">
-                                        <h4>Professional</h4>
-                                        <a href="#">Studio Monitors</a>
-                                        <a href="#">Audio Interfaces</a>
-                                        <a href="#">Microphones</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Accessories</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!-- Header Actions -->
-                <div class="header-actions">
-                    <div class="search-container">
-                        <input type="search" placeholder="Search products..." class="search-input" id="searchInput">
-                        <button class="search-btn" aria-label="Search">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                    
-                    <div class="header-icons">
-                        <button class="icon-btn compare-btn" aria-label="Compare products" id="compareBtn">
-                            <i class="fas fa-balance-scale"></i>
-                            <span class="badge" id="compareBadge">0</span>
-                        </button>
-                        
-                        <button class="icon-btn cart-btn" aria-label="Shopping cart" id="cartBtn">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="badge" id="cartBadge">0</span>
-                        </button>
-                        
-                        <button class="icon-btn user-btn" aria-label="User account" id="userBtn">
-                            <i class="fas fa-user"></i>
-                        </button>
-                    </div>
-
-                    <!-- Mobile Menu Toggle -->
-                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="#">InnoGadget Hub</a>
             </div>
-        </div>
-
-        <!-- Mobile Navigation -->
-        <div class="mobile-nav" id="mobileNav">
-            <div class="mobile-nav-content">
-                <div class="mobile-nav-header">
-                    <h3>Menu</h3>
-                    <button class="mobile-nav-close" id="mobileNavClose">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <ul class="mobile-nav-list">
-                    <li class="mobile-nav-item">
-                        <a href="#" class="mobile-nav-link">
-                            <span>Laptops</span>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </li>
-                    <li class="mobile-nav-item">
-                        <a href="#" class="mobile-nav-link">
-                            <span>Smartphones</span>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </li>
-                    <li class="mobile-nav-item">
-                        <a href="#" class="mobile-nav-link">
-                            <span>Gaming</span>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </li>
-                    <li class="mobile-nav-item">
-                        <a href="#" class="mobile-nav-link">
-                            <span>Smart Home</span>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </li>
-                    <li class="mobile-nav-item">
-                        <a href="#" class="mobile-nav-link">
-                            <span>Audio</span>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </li>
-                    <li class="mobile-nav-item">
-                        <a href="#" class="mobile-nav-link">
-                            <span>Accessories</span>
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </li>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#products-section">Gadgets</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+            </nav>
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search gadgets...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <button id="priceToggleBtn" class="btn btn-secondary price-toggle-btn">Price: USD</button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main">
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="hero-slider" id="heroSlider">
-                <div class="hero-slide active">
-                    <div class="hero-background">
-                        <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80')"></div>
-                    </div>
-                    <div class="container">
-                        <div class="hero-content">
-                            <h1 class="hero-title">Unleash the Future with Our Latest Laptops</h1>
-                            <p class="hero-description">Discover cutting-edge performance and sleek design in our premium laptop collection. From gaming powerhouses to ultraportable workstations.</p>
-                            <div class="hero-actions">
-                                <a href="#products" class="btn btn-primary">Shop Now</a>
-                                <a href="#" class="btn btn-secondary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="hero-section" style="background-image: url('https://via.placeholder.com/1920x800/2C3E50/ECF0F1?text=Discover+Innovation');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Unleash Tomorrow's Tech Today.</h1>
+            <p>Explore a curated collection of innovative and quirky gadgets that redefine possibilities.</p>
+            <a href="#products-section" class="btn btn-primary">Explore Gadgets</a>
+        </div>
+    </section>
 
-                <div class="hero-slide">
-                    <div class="hero-background">
-                        <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80')"></div>
-                    </div>
-                    <div class="container">
-                        <div class="hero-content">
-                            <h1 class="hero-title">Next-Gen Smartphones Are Here</h1>
-                            <p class="hero-description">Experience revolutionary technology with our latest smartphone lineup. Advanced cameras, lightning-fast processors, and all-day battery life.</p>
-                            <div class="hero-actions">
-                                <a href="#products" class="btn btn-primary">Explore Phones</a>
-                                <a href="#" class="btn btn-secondary">Compare Models</a>
-                            </div>
-                        </div>
-                    </div>
+    <section id="featured" class="featured-innovation-section container">
+        <h2>🔥 Deal of the Day: The Quantum Leap Earbuds 🔥</h2>
+        <div class="featured-gadget-card">
+            <img src="https://via.placeholder.com/600x400/3498DB/FFFFFF?text=Quantum+Leap+Earbuds" alt="Quantum Leap Earbuds">
+            <div class="gadget-details">
+                <h3>Quantum Leap Earbuds</h3>
+                <p class="tagline">Immersive sound, futuristic design, and 24-hour battery life.</p>
+                <p class="description">Experience audio like never before with the Quantum Leap Earbuds. Featuring active noise cancellation, crystal-clear calls, and a sleek ergonomic design. Perfect for work, travel, and play.</p>
+                <div class="price-info">
+                    <span class="original-price" data-usd-price="199.99">$199.99</span>
+                    <span class="discount-price" data-usd-price="129.99">$129.99</span>
                 </div>
+                <button class="btn btn-primary add-to-cart-featured" data-product-id="7">Grab the Deal!</button>
+            </div>
+        </div>
+    </section>
 
-                <div class="hero-slide">
-                    <div class="hero-background">
-                        <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"></div>
-                    </div>
-                    <div class="container">
-                        <div class="hero-content">
-                            <h1 class="hero-title">Level Up Your Gaming Experience</h1>
-                            <p class="hero-description">Immerse yourself in the ultimate gaming setup. High-performance PCs, 4K monitors, and professional gaming accessories.</p>
-                            <div class="hero-actions">
-                                <a href="#products" class="btn btn-primary">Shop Gaming</a>
-                                <a href="#" class="btn btn-secondary">Build Your Setup</a>
-                            </div>
-                        </div>
-                    </div>
+    <section id="products-section" class="product-display-section container">
+        <h2>Our Innovative Gadgets</h2>
+
+        <div class="filter-buttons">
+            <button class="btn filter-btn active" data-filter="all">All Gadgets</button>
+            <button class="btn filter-btn" data-filter="new-arrivals">New Arrivals</button>
+            <button class="btn filter-btn" data-filter="trending">Trending</button>
+            <button class="btn filter-btn" data-filter="highly-rated">Highly Rated</button>
+        </div>
+
+        <div class="gadget-grid" id="gadgetGrid">
+            </div>
+    </section>
+
+    <section class="counters-section parallax-bg" style="background-image: url('https://via.placeholder.com/1920x400/34495E/ECF0F1?text=Innovation+By+Numbers');">
+        <div class="container counters-content">
+            <div class="counter-item">
+                <div class="counter" data-target="15000">0</div>
+                <p>Satisfied Customers</p>
+            </div>
+            <div class="counter-item">
+                <div class="counter" data-target="500">0</div>
+                <p>Unique Gadgets</p>
+            </div>
+            <div class="counter-item">
+                <div class="counter" data-target="7500">0</div>
+                <p>5-Star Reviews</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section container">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="quote">"InnoGadget Hub always has the coolest stuff! My FlexiScreen Pro is a lifesaver."</p>
+                <div class="customer-info">
+                    <img src="https://via.placeholder.com/80x80/2980B9/FFFFFF?text=JD" alt="Customer Jane Doe">
+                    <span>Jane D.</span>
                 </div>
             </div>
+            <div class="testimonial-card">
+                <p class="quote">"The Aura Mood Lamp transformed my living room. Never knew I needed an AI lamp!"</p>
+                <div class="customer-info">
+                    <img src="https://via.placeholder.com/27AE60/FFFFFF?text=MA" alt="Customer Mark A.">
+                    <span>Mark A.</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"My cat loves the PetPal Companion. Best purchase ever for a happy pet!"</p>
+                <div class="customer-info">
+                    <img src="https://via.placeholder.com/E74C3C/FFFFFF?text=SL" alt="Customer Sarah L.">
+                    <span>Sarah L.</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Hero Navigation -->
-            <div class="hero-nav">
-                <button class="hero-nav-btn hero-prev" id="heroPrev" aria-label="Previous slide">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="hero-nav-btn hero-next" id="heroNext" aria-label="Next slide">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
+    <section class="video-section container">
+        <h2>Watch Our Gadgets in Action!</h2>
+        <div class="video-grid">
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=SomeFakeID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Unboxing the Quantum Leap Earbuds</p>
             </div>
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=SomeFakeID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Review: EcoFlow Smart Bottle</p>
+            </div>
+        </div>
+    </section>
 
-            <!-- Hero Pagination -->
-            <div class="hero-pagination" id="heroPagination">
-                <button class="hero-dot active" data-slide="0" aria-label="Go to slide 1"></button>
-                <button class="hero-dot" data-slide="1" aria-label="Go to slide 2"></button>
-                <button class="hero-dot" data-slide="2" aria-label="Go to slide 3"></button>
+    <section class="review-submission-section container">
+        <h2>Share Your Experience</h2>
+        <form id="review-form" class="review-form">
+            <div class="form-group">
+                <label for="reviewer-name">Your Name:</label>
+                <input type="text" id="reviewer-name" required>
             </div>
-        </section>
+            <div class="form-group">
+                <label for="review-gadget">Gadget Reviewed:</label>
+                <input type="text" id="review-gadget" required>
+            </div>
+            <div class="form-group">
+                <label for="review-text">Your Review:</label>
+                <textarea id="review-text" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="review-rating">Rating (1-5):</label>
+                <input type="number" id="review-rating" min="1" max="5" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+        </form>
+        <div id="submitted-reviews" class="submitted-reviews-display">
+            </div>
+    </section>
 
-        <!-- Featured Categories -->
-        <section class="featured-categories">
-            <div class="container">
-                <h2 class="section-title">Shop by Category</h2>
-                <div class="categories-grid">
-                    <div class="category-card">
-                        <div class="category-image">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h3>Laptops</h3>
-                        <p>Gaming, Business & Creative</p>
-                        <a href="#" class="category-link">Shop Now</a>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-image">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Smartphones</h3>
-                        <p>Latest Models & Accessories</p>
-                        <a href="#" class="category-link">Shop Now</a>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-image">
-                            <i class="fas fa-gamepad"></i>
-                        </div>
-                        <h3>Gaming</h3>
-                        <p>Consoles, PCs & Gear</p>
-                        <a href="#" class="category-link">Shop Now</a>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-image">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h3>Smart Home</h3>
-                        <p>Automation & Security</p>
-                        <a href="#" class="category-link">Shop Now</a>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-image">
-                            <i class="fas fa-headphones"></i>
-                        </div>
-                        <h3>Audio</h3>
-                        <p>Headphones & Speakers</p>
-                        <a href="#" class="category-link">Shop Now</a>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-image">
-                            <i class="fas fa-plug"></i>
-                        </div>
-                        <h3>Accessories</h3>
-                        <p>Cables, Cases & More</p>
-                        <a href="#" class="category-link">Shop Now</a>
-                    </div>
+    <footer id="contact" class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>InnoGadget Hub</h3>
+                <p>Your one-stop shop for the most innovative and quirky gadgets!</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#products-section">Gadgets</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </section>
-
-        <!-- Product Filters -->
-        <section class="product-filters" id="products">
-            <div class="container">
-                <div class="filters-header">
-                    <h2 class="section-title">Featured Products</h2>
-                    <div class="filters-controls">
-                        <div class="filter-group">
-                            <label for="categoryFilter">Category:</label>
-                            <select id="categoryFilter" class="filter-select">
-                                <option value="">All Categories</option>
-                                <option value="laptops">Laptops</option>
-                                <option value="smartphones">Smartphones</option>
-                                <option value="gaming">Gaming</option>
-                                <option value="smart-home">Smart Home</option>
-                                <option value="audio">Audio</option>
-                                <option value="accessories">Accessories</option>
-                            </select>
-                        </div>
-                        <div class="filter-group">
-                            <label for="priceFilter">Price Range:</label>
-                            <select id="priceFilter" class="filter-select">
-                                <option value="">All Prices</option>
-                                <option value="0-100">Under $100</option>
-                                <option value="100-500">$100 - $500</option>
-                                <option value="500-1000">$500 - $1000</option>
-                                <option value="1000-2000">$1000 - $2000</option>
-                                <option value="2000+">$2000+</option>
-                            </select>
-                        </div>
-                        <div class="filter-group">
-                            <label for="sortFilter">Sort by:</label>
-                            <select id="sortFilter" class="filter-select">
-                                <option value="featured">Featured</option>
-                                <option value="price-low">Price: Low to High</option>
-                                <option value="price-high">Price: High to Low</option>
-                                <option value="rating">Customer Rating</option>
-                                <option value="newest">Newest First</option>
-                            </select>
-                        </div>
-                        <div class="view-toggle">
-                            <button class="view-btn active" data-view="grid" aria-label="Grid view">
-                                <i class="fas fa-th"></i>
-                            </button>
-                            <button class="view-btn" data-view="list" aria-label="List view">
-                                <i class="fas fa-list"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Product Grid -->
-        <section class="product-grid">
-            <div class="container">
-                <div class="products-container" id="productsContainer">
-                    <!-- Products will be dynamically loaded here -->
-                </div>
-                
-                <!-- Load More Button -->
-                <div class="load-more-container">
-                    <button class="btn btn-secondary load-more-btn" id="loadMoreBtn">
-                        Load More Products
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="newsletter">
-            <div class="container">
-                <div class="newsletter-content">
-                    <div class="newsletter-text">
-                        <h2>Stay Updated with Tech Trends</h2>
-                        <p>Get the latest deals, product launches, and tech news delivered to your inbox.</p>
-                    </div>
-                    <form class="newsletter-form" id="newsletterForm">
-                        <div class="form-group">
-                            <input type="email" placeholder="Enter your email address" class="newsletter-input" id="newsletterEmail" required>
-                            <button type="submit" class="btn btn-primary newsletter-btn">
-                                Subscribe
-                            </button>
-                        </div>
-                        <div class="newsletter-privacy">
-                            <small>We respect your privacy. Unsubscribe at any time.</small>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <i class="fas fa-microchip"></i>
-                        <span>TechHaven</span>
-                    </div>
-                    <p>Your ultimate destination for cutting-edge technology. We bring you the latest and greatest in tech innovation.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="#">Laptops</a></li>
-                        <li><a href="#">Smartphones</a></li>
-                        <li><a href="#">Gaming</a></li>
-                        <li><a href="#">Smart Home</a></li>
-                        <li><a href="#">Audio</a></li>
-                        <li><a href="#">Accessories</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="#" id="faqLink">FAQ</a></li>
-                        <li><a href="#" id="orderTrackingLink">Order Tracking</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Live Chat</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Investors</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2024 TechHaven. All rights reserved.</p>
-                    <div class="payment-methods">
-                        <i class="fab fa-cc-visa"></i>
-                        <i class="fab fa-cc-mastercard"></i>
-                        <i class="fab fa-cc-amex"></i>
-                        <i class="fab fa-cc-paypal"></i>
-                        <i class="fab fa-apple-pay"></i>
-                        <i class="fab fa-google-pay"></i>
-                    </div>
-                </div>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 InnoGadget Hub. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Modals -->
-    <!-- Quick View Modal -->
-    <div class="modal" id="quickViewModal">
-        <div class="modal-overlay" id="quickViewOverlay"></div>
-        <div class="modal-content quick-view-content">
-            <button class="modal-close" id="quickViewClose">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="quick-view-body" id="quickViewBody">
-                <!-- Quick view content will be dynamically loaded here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Product Comparison Modal -->
-    <div class="modal" id="compareModal">
-        <div class="modal-overlay" id="compareOverlay"></div>
-        <div class="modal-content compare-content">
-            <div class="modal-header">
-                <h3>Compare Products</h3>
-                <button class="modal-close" id="compareClose">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="compare-body" id="compareBody">
-                <!-- Comparison content will be dynamically loaded here -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Shopping Cart Sidebar -->
-    <div class="cart-sidebar" id="cartSidebar">
-        <div class="cart-overlay" id="cartOverlay"></div>
-        <div class="cart-content">
-            <div class="cart-header">
-                <h3>Shopping Cart</h3>
-                <button class="cart-close" id="cartClose">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="cart-body" id="cartBody">
-                <!-- Cart items will be dynamically loaded here -->
-            </div>
-            <div class="cart-footer">
-                <div class="cart-total">
-                    <div class="total-line">
-                        <span>Subtotal:</span>
-                        <span id="cartSubtotal">$0.00</span>
-                    </div>
-                    <div class="total-line total-main">
-                        <span>Total:</span>
-                        <span id="cartTotal">$0.00</span>
-                    </div>
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <div class="modal-body">
+                <div class="modal-image-gallery">
+                    <img id="modal-main-image" src="" alt="Product Image">
+                    <div class="modal-thumbnails">
+                        </div>
                 </div>
-                <div class="cart-actions">
-                    <button class="btn btn-secondary" id="viewCartBtn">View Cart</button>
-                    <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+                <div class="modal-details">
+                    <h3 id="modal-product-name"></h3>
+                    <p id="modal-product-description"></p>
+                    <p class="modal-price" id="modal-product-price"></p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    <a href="#" class="btn btn-secondary view-full-details" id="modalViewFullDetailsBtn">View Full Details</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Loading Spinner -->
-    <div class="loading-spinner" id="loadingSpinner">
-        <div class="spinner"></div>
-    </div>
+    <section id="productDetailPage" class="product-detail-page container" style="display: none;">
+        <button class="btn btn-back-to-products" id="backToProductsBtn"><i class="fas fa-arrow-left"></i> Back to Gadgets</button>
+        <div class="product-detail-content">
+            <div class="product-detail-image-gallery">
+                <img id="detail-main-image" src="" alt="Product Detail Image">
+                <div id="detail-thumbnails" class="detail-thumbnails">
+                    </div>
+            </div>
+            <div class="product-detail-info">
+                <h1 id="detail-product-name"></h1>
+                <p class="product-detail-price" id="detail-product-price"></p>
+                <p class="product-detail-description" id="detail-product-long-description"></p>
+                <button class="btn btn-primary add-to-cart" id="detailAddToCartBtn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="related-products">
+            <h3>You Might Also Like</h3>
+            <div class="gadget-grid">
+                </div>
+        </div>
+    </section>
 
-    <!-- Toast Notifications -->
-    <div class="toast-container" id="toastContainer"></div>
+    <a href="#products-section" class="sticky-cta-button" id="exploreMoreBtn">
+        <i class="fas fa-arrow-right"></i> Explore More Gadgets
+    </a>
 
-    <!-- Scripts -->
-    <script src="js/script.js"></script>
+    <script src="data.js"></script> <script src="script.js"></script>
 </body>
 </html>
-
