@@ -56,7 +56,7 @@ const productsData = [
             'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop',
             'https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?w=600&h=400&fit=crop'
         ],
-        affiliateLink: 'https://wirelesscharger.example.com/buy'
+        affiliateLink: 'https://amzn.to/4mfe1Yi'
     },
 
     // Home & Living Category
