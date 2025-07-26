@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnoGadget Hub - नवाचार और अनोखे गैजेट्स</title>
-    <meta name="description" content="भविष्य की तकनीक आज ही खोजें। नवाचार और अनोखे गैजेट्स का संग्रह।">
+    <title>InnoGadget Hub - Innovation and Unique Gadgets</title>
+    <meta name="description" content="Discover the technology of tomorrow, today. A collection of innovative and unique gadgets.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400,600,700&family=Poppins:wght@300,400,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
 </head>
 <body>
-    <!-- Loading Spinner -->
     <div id="loading-spinner" class="loading-spinner">
         <div class="spinner"></div>
     </div>
 
-    <!-- Header -->
     <header class="main-header">
         <div class="container header-content">
             <div class="logo">
-                <a href="#" aria-label="InnoGadget Hub होम">InnoGadget Hub</a>
+                <a href="#" aria-label="InnoGadget Hub Home">InnoGadget Hub</a>
             </div>
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="#featured">फीचर्ड</a></li>
-                    <li><a href="#products-section">गैजेट्स</a></li>
-                    <li><a href="#contact">संपर्क</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#products-section">Gadgets</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-right">
                 <div class="search-bar">
-                    <input type="text" placeholder="गैजेट्स खोजें..." aria-label="उत्पाद खोजें">
-                    <button aria-label="खोजें"><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="Search gadgets..." aria-label="Search products">
+                    <button aria-label="Search"><i class="fas fa-search"></i></button>
                 </div>
-                <button id="priceToggleBtn" class="btn btn-secondary price-toggle-btn">मूल्य: USD</button>
+                <button id="priceToggleBtn" class="btn btn-secondary price-toggle-btn">Price: USD</button>
             </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -42,85 +40,75 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container hero-content">
-            <h1>कल की तकनीक आज ही अनलॉक करें।</h1>
-            <p>नवाचार और अनोखे गैजेट्स का एक क्यूरेटेड संग्रह खोजें जो संभावनाओं को फिर से परिभाषित करता है।</p>
-            <a href="#products-section" class="btn btn-primary">गैजेट्स एक्सप्लोर करें</a>
+            <h1>Unlock Tomorrow's Tech, Today.</h1>
+            <p>Discover a curated collection of innovative and unique gadgets that redefine possibilities.</p>
+            <a href="#products-section" class="btn btn-primary">Explore Gadgets</a>
         </div>
     </section>
 
-    <!-- Featured Product Section -->
     <section id="featured" class="featured-innovation-section container">
-        <h2>🔥 आज का डील: क्वांटम लीप ईयरबड्स 🔥</h2>
+        <h2>🔥 Today's Deal: Quantum Leap Earbuds 🔥</h2>
         <div class="featured-gadget-card">
             <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=400&fit=crop" alt="Quantum Leap Earbuds" loading="lazy">
             <div class="gadget-details">
-                <h3>क्वांटम लीप ईयरबड्स</h3>
-                <p class="tagline">इमर्सिव साउंड, फ्यूचरिस्टिक डिज़ाइन, और 24-घंटे की बैटरी लाइफ।</p>
-                <p class="description">क्वांटम लीप ईयरबड्स के साथ ऑडियो का अनुभव पहले जैसा कभी नहीं किया। एक्टिव नॉइज़ कैंसिलेशन, क्रिस्टल-क्लियर कॉल्स, और एक स्लीक एर्गोनॉमिक डिज़ाइन की सुविधा। काम, यात्रा और खेल के लिए बिल्कुल सही।</p>
+                <h3>Quantum Leap Earbuds</h3>
+                <p class="tagline">Immersive sound, futuristic design, and 24-hour battery life.</p>
+                <p class="description">Experience audio like never before with Quantum Leap Earbuds. Featuring active noise cancellation, crystal-clear calls, and a sleek ergonomic design. Perfect for work, travel, and play.</p>
                 <div class="price-info">
                     <span class="original-price" data-usd-price="199.99">$199.99</span>
                     <span class="discount-price" data-usd-price="129.99">$129.99</span>
                 </div>
-                <button class="btn btn-primary add-to-cart-featured" data-product-id="2">डील पकड़ें!</button>
+                <button class="btn btn-primary add-to-cart-featured" data-product-id="2">Grab the Deal!</button>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
     <section id="products-section" class="product-display-section container">
-        <h2>हमारे नवाचार गैजेट्स</h2>
+        <h2>Our Innovative Gadgets</h2>
 
-        <!-- Filter Buttons (will be populated by JavaScript) -->
         <div class="filter-buttons">
-            <!-- Category buttons will be dynamically generated -->
-        </div>
+            </div>
 
-        <!-- Product Grid -->
         <div class="gadget-grid" id="gadgetGrid">
-            <!-- Products will be dynamically loaded -->
-        </div>
+            </div>
 
-        <!-- Pagination will be added here dynamically -->
-    </section>
+        </section>
 
-    <!-- Counters Section -->
     <section class="counters-section">
         <div class="container counters-content">
             <div class="counter-item">
                 <div class="counter" data-target="15000">0</div>
-                <p>संतुष्ट ग्राहक</p>
+                <p>Satisfied Customers</p>
             </div>
             <div class="counter-item">
                 <div class="counter" data-target="500">0</div>
-                <p>अनोखे गैजेट्स</p>
+                <p>Unique Gadgets</p>
             </div>
             <div class="counter-item">
                 <div class="counter" data-target="7500">0</div>
-                <p>5-स्टार रिव्यूज</p>
+                <p>5-Star Reviews</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer id="contact" class="main-footer">
         <div class="container footer-content">
             <div class="footer-col">
                 <h3>InnoGadget Hub</h3>
-                <p>सबसे नवाचार और अनोखे गैजेट्स के लिए आपकी वन-स्टॉप शॉप!</p>
+                <p>Your one-stop shop for the most innovative and unique gadgets!</p>
             </div>
             <div class="footer-col">
-                <h3>क्विक लिंक्स</h3>
+                <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#featured">फीचर्ड</a></li>
-                    <li><a href="#products-section">गैजेट्स</a></li>
-                    <li><a href="#contact">संपर्क</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#products-section">Gadgets</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>हमसे जुड़ें</h3>
+                <h3>Connect With Us</h3>
                 <div class="social-icons">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -130,62 +118,55 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 InnoGadget Hub. सभी अधिकार सुरक्षित।</p>
+            <p>© 2025 InnoGadget Hub. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Quick View Modal -->
     <div id="quickViewModal" class="modal" role="dialog" aria-labelledby="modal-product-name" aria-hidden="true">
         <div class="modal-content">
-            <span class="close-button" aria-label="मोडल बंद करें">&times;</span>
+            <span class="close-button" aria-label="Close modal">&times;</span>
             <div class="modal-body">
                 <div class="modal-image-gallery">
-                    <img id="modal-main-image" src="" alt="उत्पाद इमेज">
+                    <img id="modal-main-image" src="" alt="Product Image">
                     <div class="modal-thumbnails">
-                        <!-- Thumbnails will be populated dynamically -->
-                    </div>
+                        </div>
                 </div>
                 <div class="modal-details">
                     <h3 id="modal-product-name"></h3>
                     <p id="modal-product-description"></p>
                     <p class="modal-price" id="modal-product-price"></p>
-                    <button class="btn btn-primary add-to-cart">कार्ट में जोड़ें</button>
-                    <a href="#" class="btn btn-secondary view-full-details" id="modalViewFullDetailsBtn">पूरा विवरण देखें</a>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    <a href="#" class="btn btn-secondary view-full-details" id="modalViewFullDetailsBtn">View Full Details</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Product Detail Page -->
     <section id="productDetailPage" class="product-detail-page container" style="display: none;">
         <button class="btn btn-back-to-products" id="backToProductsBtn">
-            <i class="fas fa-arrow-left"></i> गैजेट्स पर वापस जाएं
+            <i class="fas fa-arrow-left"></i> Back to Gadgets
         </button>
         <div class="product-detail-content">
             <div class="product-detail-image-gallery">
-                <img id="detail-main-image" src="" alt="उत्पाद विस्तार इमेज">
+                <img id="detail-main-image" src="" alt="Product Detail Image">
                 <div id="detail-thumbnails" class="detail-thumbnails">
-                    <!-- Thumbnails will be populated dynamically -->
-                </div>
+                    </div>
             </div>
             <div class="product-detail-info">
                 <h1 id="detail-product-name"></h1>
                 <p class="product-detail-price" id="detail-product-price"></p>
                 <p class="product-detail-description" id="detail-product-long-description"></p>
-                <button class="btn btn-primary add-to-cart" id="detailAddToCartBtn">कार्ट में जोड़ें</button>
+                <button class="btn btn-primary add-to-cart" id="detailAddToCartBtn">Add to Cart</button>
             </div>
         </div>
         <div class="related-products">
-            <h3>आपको यह भी पसंद आ सकता है</h3>
+            <h3>You Might Also Like</h3>
             <div class="gadget-grid">
-                <!-- Related products will be populated dynamically -->
-            </div>
+                </div>
         </div>
     </section>
 
-    <!-- Scripts -->
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
