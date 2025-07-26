@@ -7,17 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         loadingSpinner.style.opacity = '0';
         loadingSpinner.style.display = 'none';
-    }, 1000); // Spinner visible for 1 second
+    }, 1000);
 
     // --- Global Variables ---
-    let currentCurrency = 'USD'; // Default currency
+    let currentCurrency = 'USD';
     const USD_SYMBOL = '$';
     const INR_SYMBOL = '₹';
+    let currentFilter = 'all';
+    let currentPage = 1;
+    const productsPerPage = 12;
 
     // --- DOM Elements ---
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    const header = document.querySelector('.main-header');
     const quickViewModal = document.getElementById('quickViewModal');
     const closeButton = quickViewModal.querySelector('.close-button');
     const modalProductName = document.getElementById('modal-product-name');
@@ -25,37 +27,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalProductPrice = document.getElementById('modal-product-price');
     const modalMainImage = document.getElementById('modal-main-image');
     const modalThumbnails = document.querySelector('.modal-thumbnails');
-    const modalAddToCartBtn = quickViewModal.querySelector('.add-to-cart'); // Get modal's Add to Cart button
+    const modalAddToCartBtn = quickViewModal.querySelector('.add-to-cart');
     const gadgetGrid = document.getElementById('gadgetGrid');
     const filterButtons = document.querySelectorAll('.filter-btn');
     const counters = document.querySelectorAll('.counter');
     const countersSection = document.querySelector('.counters-section');
-    const exploreMoreBtn = document.getElementById('exploreMoreBtn');
-    const heroSection = document.querySelector('.hero-section');
-    const reviewForm = document.getElementById('review-form');
-    const submittedReviewsContainer = document.getElementById('submitted-reviews');
     const priceToggleBtn = document.getElementById('priceToggleBtn');
+    const searchInput = document.querySelector('.search-bar input');
+    const searchButton = document.querySelector('.search-bar button');
 
     // Product Detail Page Elements
     const productDetailPage = document.getElementById('productDetailPage');
-    const productsSection = document.getElementById('products-section'); // The main product grid section
+    const productsSection = document.getElementById('products-section');
     const backToProductsBtn = document.getElementById('backToProductsBtn');
     const detailMainImage = document.getElementById('detail-main-image');
     const detailThumbnails = document.getElementById('detail-thumbnails');
     const detailProductName = document.getElementById('detail-product-name');
     const detailProductPrice = document.getElementById('detail-product-price');
     const detailProductLongDescription = document.getElementById('detail-product-long-description');
-    const detailAddToCartBtn = document.getElementById('detailAddToCartBtn'); // Get detail page's Add to Cart button
+    const detailAddToCartBtn = document.getElementById('detailAddToCartBtn');
     const modalViewFullDetailsBtn = document.getElementById('modalViewFullDetailsBtn');
     const featuredDiscountPrice = document.querySelector('.featured-gadget-card .discount-price');
     const featuredOriginalPrice = document.querySelector('.featured-gadget-card .original-price');
     const featuredAddToCartBtn = document.querySelector('.add-to-cart-featured');
 
-    // --- NEW: Products to showcase on homepage ---
-    // Yahan un products ki IDs dalein jinhein aap homepage par dikhana chahte hain.
-    // Aap apni pasand ke hisaab se IDs badal sakte hain.
-    const showcaseProductIds = [1, 2, 4, 6]; // Example: FlexiScreen Pro, Aura Mood Lamp, PetPal Companion, Smart AeroGarden
-    // Agar aap randomly products dikhana chahte hain, toh yeh logic change kar sakte hain.
+    // Pagination Elements
+    const paginationContainer = document.createElement('div');
+    paginationContainer.className = 'pagination-container';
+    paginationContainer.innerHTML = `
+        <div class="pagination">
+            <button id="prevPage" class="btn btn-secondary">Previous</button>
+            <span id="pageInfo">Page 1 of 1</span>
+            <button id="nextPage" class="btn btn-secondary">Next</button>
+        </div>
+    `;
 
     // --- Helper Functions ---
     const formatPrice = (priceUSD) => {
@@ -100,38 +105,110 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.classList.add('gadget-card');
         card.dataset.category = product.category;
+        card.dataset.name = product.name.toLowerCase();
         card.innerHTML = `
-            <img src="${product.images[0]}" alt="${product.name}">
+            <img src="${product.images[0]}" alt="${product.name}" loading="lazy">
             <h3>${product.name}</h3>
             <p class="price" data-usd-price="${product.priceUSD}">${formatPrice(product.priceUSD)}</p>
             <p class="short-desc">${product.shortDescription}</p>
-            <button class="btn btn-secondary btn-quick-view" data-id="${product.id}">Quick View</button>
-            <button class="btn btn-primary btn-view-product" data-id="${product.id}">View Product</button>
+            <div class="card-buttons">
+                <button class="btn btn-secondary btn-quick-view" data-id="${product.id}">Quick View</button>
+                <button class="btn btn-primary btn-view-product" data-id="${product.id}">View Details</button>
+            </div>
         `;
         return card;
     };
 
-    // --- MODIFIED: Function to populate the product grid (only showcase products) ---
-    const populateProductGrid = (filter = 'all') => {
-        gadgetGrid.innerHTML = ''; // Clear existing cards
-        
-        // Filter products based on showcaseProductIds for the initial load
-        const productsToDisplay = productsData.filter(product => showcaseProductIds.includes(product.id));
+    // Function to filter products
+    const getFilteredProducts = (filter = 'all', searchTerm = '') => {
+        let filtered = productsData;
 
-        productsToDisplay.forEach(product => {
+        // Apply category filter
+        if (filter !== 'all') {
+            filtered = filtered.filter(product => {
+                const categories = product.category.split(' ');
+                return categories.includes(filter);
+            });
+        }
+
+        // Apply search filter
+        if (searchTerm) {
+            filtered = filtered.filter(product => 
+                product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                product.shortDescription.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                product.category.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        }
+
+        return filtered;
+    };
+
+    // Function to populate the product grid with pagination
+    const populateProductGrid = (filter = 'all', searchTerm = '', page = 1) => {
+        gadgetGrid.innerHTML = '';
+        
+        const filteredProducts = getFilteredProducts(filter, searchTerm);
+        const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+        const startIndex = (page - 1) * productsPerPage;
+        const endIndex = startIndex + productsPerPage;
+        const productsToShow = filteredProducts.slice(startIndex, endIndex);
+
+        if (productsToShow.length === 0) {
+            gadgetGrid.innerHTML = `
+                <div class="no-products">
+                    <h3>No products found</h3>
+                    <p>Try adjusting your search or filter criteria.</p>
+                </div>
+            `;
+            return;
+        }
+
+        productsToShow.forEach(product => {
             const card = createProductCard(product);
-            // Apply initial filter if any specific filter is active on load (though usually 'all' for homepage)
-            const categories = card.dataset.category.split(' ');
-            if (filter === 'all' || categories.includes(filter)) {
-                card.style.display = 'flex';
-            } else {
-                card.style.display = 'none';
-            }
             gadgetGrid.appendChild(card);
         });
 
+        // Update pagination
+        updatePagination(page, totalPages, filteredProducts.length);
+
         // Re-attach event listeners for newly created buttons
         attachProductButtonListeners();
+    };
+
+    // Function to update pagination
+    const updatePagination = (currentPage, totalPages, totalProducts) => {
+        const existingPagination = document.querySelector('.pagination-container');
+        if (existingPagination) {
+            existingPagination.remove();
+        }
+
+        if (totalPages > 1) {
+            const productsSection = document.getElementById('products-section');
+            productsSection.appendChild(paginationContainer);
+
+            const prevBtn = document.getElementById('prevPage');
+            const nextBtn = document.getElementById('nextPage');
+            const pageInfo = document.getElementById('pageInfo');
+
+            pageInfo.textContent = `Page ${currentPage} of ${totalPages} (${totalProducts} products)`;
+            
+            prevBtn.disabled = currentPage === 1;
+            nextBtn.disabled = currentPage === totalPages;
+
+            prevBtn.onclick = () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    populateProductGrid(currentFilter, searchInput.value, currentPage);
+                }
+            };
+
+            nextBtn.onclick = () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    populateProductGrid(currentFilter, searchInput.value, currentPage);
+                }
+            };
+        }
     };
 
     // Attach event listeners for Quick View and View Product buttons
@@ -144,6 +221,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Function to create category filter buttons
+    const createCategoryFilters = () => {
+        const filterContainer = document.querySelector('.filter-buttons');
+        filterContainer.innerHTML = '';
+
+        productCategories.forEach(category => {
+            const button = document.createElement('button');
+            button.className = `btn filter-btn ${category.id === 'all' ? 'active' : ''}`;
+            button.dataset.filter = category.id;
+            button.innerHTML = `${category.icon} ${category.name}`;
+            filterContainer.appendChild(button);
+        });
+
+        // Attach event listeners to new filter buttons
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+                currentFilter = filter;
+                currentPage = 1;
+
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                populateProductGrid(filter, searchInput.value, currentPage);
+            });
+        });
+    };
 
     // --- Header and Navigation ---
     menuToggle.addEventListener('click', () => {
@@ -171,6 +275,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- Search Functionality ---
+    const performSearch = () => {
+        const searchTerm = searchInput.value.trim();
+        currentPage = 1;
+        populateProductGrid(currentFilter, searchTerm, currentPage);
+    };
+
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+
+    // Real-time search (optional)
+    searchInput.addEventListener('input', () => {
+        clearTimeout(searchInput.searchTimeout);
+        searchInput.searchTimeout = setTimeout(() => {
+            performSearch();
+        }, 500);
+    });
 
     // --- Product Quick-View Modal ---
     const openQuickViewModal = (productId) => {
@@ -178,9 +303,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (product) {
             modalProductName.textContent = product.name;
-            modalProductDescription.textContent = product.shortDescription; // Quick view shows short description
-            modalProductPrice.dataset.usdPrice = product.priceUSD; // Store USD price
-            modalProductPrice.textContent = formatPrice(product.priceUSD); // Display formatted price
+            modalProductDescription.textContent = product.shortDescription;
+            modalProductPrice.dataset.usdPrice = product.priceUSD;
+            modalProductPrice.textContent = formatPrice(product.priceUSD);
             modalMainImage.src = product.images[0];
 
             modalThumbnails.innerHTML = '';
@@ -200,17 +325,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalThumbnails.appendChild(thumb);
             });
 
-            // Set up "Buy Now" button for Quick View modal
             modalAddToCartBtn.textContent = 'Buy Now';
             modalAddToCartBtn.onclick = () => {
                 if (product.affiliateLink) {
-                    window.open(product.affiliateLink, '_blank'); // Open affiliate link in new tab
+                    window.open(product.affiliateLink, '_blank');
                 } else {
                     alert('Affiliate link not available for this product.');
                 }
             };
 
-            // Set product ID for "View Full Details" button in modal
             modalViewFullDetailsBtn.dataset.id = productId;
             modalViewFullDetailsBtn.onclick = () => {
                 quickViewModal.style.display = 'none';
@@ -242,33 +365,28 @@ document.addEventListener('DOMContentLoaded', () => {
         if (product) {
             // Hide main sections and show detail page
             productsSection.style.display = 'none';
-            document.getElementById('featured').style.display = 'none'; // Hide featured section too
-            document.getElementById('testimonials').style.display = 'none';
-            document.querySelector('.video-section').style.display = 'none';
-            document.querySelector('.review-submission-section').style.display = 'none';
+            document.getElementById('featured').style.display = 'none';
             document.querySelector('.counters-section').style.display = 'none';
-
+            document.querySelector('.main-footer').style.display = 'none';
 
             productDetailPage.style.display = 'block';
-            window.scrollTo(0, 0); // Scroll to top of the page
+            window.scrollTo(0, 0);
 
             detailProductName.textContent = product.name;
-            detailProductPrice.dataset.usdPrice = product.priceUSD; // Store USD price
-            detailProductPrice.textContent = formatPrice(product.priceUSD); // Display formatted price
+            detailProductPrice.dataset.usdPrice = product.priceUSD;
+            detailProductPrice.textContent = formatPrice(product.priceUSD);
             detailProductLongDescription.textContent = product.longDescription;
             detailMainImage.src = product.images[0];
 
-            // Set up "Buy Now" button for Product Detail Page
-            detailAddToCartBtn.textContent = 'Buy Now'; // Change button text
-            detailAddToCartBtn.dataset.id = product.id; // Store product ID
-            detailAddToCartBtn.onclick = () => { // Attach click handler
+            detailAddToCartBtn.textContent = 'Buy Now';
+            detailAddToCartBtn.dataset.id = product.id;
+            detailAddToCartBtn.onclick = () => {
                 if (product.affiliateLink) {
-                    window.open(product.affiliateLink, '_blank'); // Open affiliate link in new tab
+                    window.open(product.affiliateLink, '_blank');
                 } else {
                     alert('Affiliate link not available for this product.');
                 }
             };
-
 
             detailThumbnails.innerHTML = '';
             product.images.forEach((imgSrc, index) => {
@@ -286,54 +404,68 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 detailThumbnails.appendChild(thumb);
             });
+
+            // Show related products
+            showRelatedProducts(product);
         }
+    };
+
+    // Function to show related products
+    const showRelatedProducts = (currentProduct) => {
+        const relatedContainer = document.querySelector('.related-products .gadget-grid');
+        relatedContainer.innerHTML = '';
+
+        // Get products from the same category (excluding current product)
+        const relatedProducts = productsData
+            .filter(p => p.id !== currentProduct.id)
+            .filter(p => {
+                const currentCategories = currentProduct.category.split(' ');
+                const productCategories = p.category.split(' ');
+                return currentCategories.some(cat => productCategories.includes(cat));
+            })
+            .slice(0, 4); // Show only 4 related products
+
+        relatedProducts.forEach(product => {
+            const card = createProductCard(product);
+            relatedContainer.appendChild(card);
+        });
+
+        // Re-attach event listeners for related products
+        relatedContainer.querySelectorAll('.btn-quick-view').forEach(button => {
+            button.onclick = (event) => openQuickViewModal(event.target.dataset.id);
+        });
+        relatedContainer.querySelectorAll('.btn-view-product').forEach(button => {
+            button.onclick = (event) => showProductDetailPage(event.target.dataset.id);
+        });
     };
 
     backToProductsBtn.addEventListener('click', () => {
         productDetailPage.style.display = 'none';
         productsSection.style.display = 'block';
-        document.getElementById('featured').style.display = 'block'; // Show featured section again
-        document.getElementById('testimonials').style.display = 'block';
-        document.querySelector('.video-section').style.display = 'block';
-        document.querySelector('.review-submission-section').style.display = 'block';
+        document.getElementById('featured').style.display = 'block';
         document.querySelector('.counters-section').style.display = 'block';
+        document.querySelector('.main-footer').style.display = 'block';
 
-        window.scrollTo(0, productsSection.offsetTop); // Scroll to products section
+        window.scrollTo(0, productsSection.offsetTop);
     });
 
     // Handle "Grab the Deal!" for Featured Product
-    featuredAddToCartBtn.addEventListener('click', () => {
-        const featuredProductId = featuredAddToCartBtn.dataset.productId;
-        const featuredProduct = productsData.find(p => p.id == featuredProductId);
-        if (featuredProduct && featuredProduct.affiliateLink) {
-            window.open(featuredProduct.affiliateLink, '_blank'); // Open affiliate link in new tab
-        } else {
-            alert('Affiliate link not available for the featured product.');
-        }
-    });
-
-
-    // --- MODIFIED: Interactive Filters (now filters only the showcased products) ---
-    // If you want filter buttons to show ALL products, you'll need a separate "All Products" page
-    // or modify this logic to load all products when a filter is clicked, and then hide them again
-    // when returning to the homepage. For simplicity, this currently filters only the showcased ones.
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const filter = button.dataset.filter;
-
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            // Filter only the *currently displayed* products
-            document.querySelectorAll('.gadget-card').forEach(card => {
-                const categories = card.dataset.category.split(' ');
-                if (filter === 'all' || categories.includes(filter)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+    if (featuredAddToCartBtn) {
+        featuredAddToCartBtn.addEventListener('click', () => {
+            const featuredProductId = featuredAddToCartBtn.dataset.productId;
+            const featuredProduct = productsData.find(p => p.id == featuredProductId);
+            if (featuredProduct && featuredProduct.affiliateLink) {
+                window.open(featuredProduct.affiliateLink, '_blank');
+            } else {
+                alert('Affiliate link not available for the featured product.');
+            }
         });
+    }
+
+    // --- Currency Toggle ---
+    priceToggleBtn.addEventListener('click', () => {
+        currentCurrency = currentCurrency === 'USD' ? 'INR' : 'USD';
+        updateAllPrices();
     });
 
     // --- Animated Counters ---
@@ -348,69 +480,66 @@ document.addEventListener('DOMContentLoaded', () => {
             if (current < target) {
                 current += increment;
                 counter.textContent = Math.ceil(current);
-                requestAnimationFrame(updateCounter);
+                setTimeout(updateCounter, 10);
             } else {
-                counter.textContent = target.toLocaleString();
+                counter.textContent = target;
             }
         };
         updateCounter();
     };
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !countersAnimated) {
-                counters.forEach(animateCounter);
+    const handleCountersAnimation = () => {
+        if (!countersAnimated && countersSection) {
+            const rect = countersSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
                 countersAnimated = true;
+                counters.forEach(counter => animateCounter(counter));
+            }
+        }
+    };
+
+    window.addEventListener('scroll', handleCountersAnimation);
+
+    // --- Smooth Scrolling ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
-    }, {
-        threshold: 0.5
     });
 
-    observer.observe(countersSection);
-
-    // --- Sticky Call-to-Action Button ---
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > heroSection.offsetHeight / 2) {
-            exploreMoreBtn.classList.add('show');
-        } else {
-            exploreMoreBtn.classList.remove('show');
-        }
-    });
-
-    // --- Simple Review Submission Form (Client-side display) ---
-    reviewForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        const reviewerName = document.getElementById('reviewer-name').value;
-        const reviewGadget = document.getElementById('review-gadget').value;
-        const reviewText = document.getElementById('review-text').value;
-        const reviewRating = document.getElementById('review-rating').value;
-
-        if (reviewerName && reviewGadget && reviewText && reviewRating) {
-            const newReviewCard = document.createElement('div');
-            newReviewCard.classList.add('submitted-review-card');
-            newReviewCard.innerHTML = `
-                <h4>${reviewerName} - Reviewed: ${reviewGadget}</h4>
-                <p class="rating">Rating: ${'⭐'.repeat(parseInt(reviewRating))}</p>
-                <p>"${reviewText}"</p>
-            `;
-            submittedReviewsContainer.prepend(newReviewCard);
-
-            reviewForm.reset();
-        } else {
-            alert('Please fill in all review fields!');
-        }
-    });
-
-    // --- Price Toggle Button ---
-    priceToggleBtn.addEventListener('click', () => {
-        currentCurrency = currentCurrency === 'USD' ? 'INR' : 'USD';
+    // --- Initialize the page ---
+    const initializePage = () => {
+        createCategoryFilters();
+        populateProductGrid('all', '', 1);
         updateAllPrices();
-    });
+        
+        // Set featured product data
+        if (featuredAddToCartBtn && productsData.length > 0) {
+            // Use the first product as featured (you can change this logic)
+            const featuredProduct = productsData.find(p => p.id === 2); // Quantum Leap Earbuds
+            if (featuredProduct) {
+                featuredAddToCartBtn.dataset.productId = featuredProduct.id;
+                if (featuredDiscountPrice) {
+                    featuredDiscountPrice.dataset.usdPrice = featuredProduct.priceUSD;
+                    featuredDiscountPrice.textContent = formatPrice(featuredProduct.priceUSD);
+                }
+                if (featuredOriginalPrice) {
+                    const originalPrice = featuredProduct.priceUSD * 1.5; // 50% discount
+                    featuredOriginalPrice.dataset.usdPrice = originalPrice;
+                    featuredOriginalPrice.textContent = formatPrice(originalPrice);
+                }
+            }
+        }
+    };
 
-
-    // Initial population of products (only showcase products) and price update
-    populateProductGrid(); // This will now only display products from showcaseProductIds
-    updateAllPrices(); // Ensure prices are correct on load, especially for featured product
+    // Initialize the page when DOM is loaded
+    initializePage();
 });
+
