@@ -190,7 +190,7 @@ h2::after {
 }
 
 .main-nav {
-    display: flex;
+    display: inline;
 }
 
 .nav-links {
