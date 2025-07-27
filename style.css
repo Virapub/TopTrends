@@ -178,28 +178,7 @@ h2::after {
     flex-wrap: wrap;
 }
 
-
-.nav-logo {
-  height: 50px;
-  width: 100px;
-}
-
-.logo{
-  background-image: url("﻿../images/logo.png");
-  background-size: scale-down;
-  height: 50px;
-  width: 100%;
-}
-
-.name-first {
-  color: #cccccc;
-  font-size: 1rem;
-}
-
-.name-second {
-  font-size: 0.5rem;
-}
-.logo {
+.logo a {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8em;
     font-weight: 700;
@@ -210,16 +189,16 @@ h2::after {
     text-decoration: none;
 }
 
-.main-nav.nav-links {
+.main-nav .nav-links {
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 30px;
 }
 
 .main-nav .nav-links a {
     color: var(--light-text);
     font-weight: 400;
-    position: inline-flex;
+    position: relative;
     padding: 10px 0;
     transition: var(--transition);
     text-decoration: none;
@@ -400,7 +379,7 @@ h2::after {
 }
 
 .gadget-details {
-    text-align: bottom;
+    text-align: left;
 }
 
 .gadget-details h3 {
