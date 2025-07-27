@@ -13,7 +13,6 @@ Document.addEventListener('DOMContentLoaded', () => {
     let currentCurrency = 'USD';
     const USD_SYMBOL = '$';
     const INR_SYMBOL = '₹';
-    const USD_TO_INR_RATE = 83; // You need to define this constant
     let currentFilter = 'all';
     let currentPage = 1;
     const productsPerPage = 12;
@@ -73,34 +72,29 @@ Document.addEventListener('DOMContentLoaded', () => {
     };
 
     const updateAllPrices = () => {
-    // Update product grid prices
-    document.querySelectorAll('.gadget-card .price').forEach(priceEl => {
-        const usdPrice = parseFloat(priceEl.dataset.usdPrice);
-        priceEl.textContent = formatPrice(usdPrice);
-    });
+        // Update product grid prices
+        document.querySelectorAll('.gadget-card .price').forEach(priceEl => {
+            const usdPrice = parseFloat(priceEl.dataset.usdPrice);
+            priceEl.textContent = formatPrice(usdPrice);
+        });
 
-    // Update modal price
-    if (modalProductPrice.dataset.usdPrice) {
-        modalProductPrice.textContent = formatPrice(parseFloat(modalProductPrice.dataset.usdPrice));
-    }
+        // Update modal price
+        if (modalProductPrice.dataset.usdPrice) {
+            modalProductPrice.textContent = formatPrice(parseFloat(modalProductPrice.dataset.usdPrice));
+        }
 
-    // Update product detail page price
-    if (detailProductPrice.dataset.usdPrice) {
-        detailProductPrice.textContent = formatPrice(parseFloat(detailProductPrice.dataset.usdPrice));
-    }
+        // Update product detail page price
+        if (detailProductPrice.dataset.usdPrice) {
+            detailProductPrice.textContent = formatPrice(parseFloat(detailProductPrice.dataset.usdPrice));
+        }
 
-    // Update Deal of the Day prices
-    if (featuredDiscountPrice && featuredDiscountPrice.dataset.usdPrice) {
-        featuredDiscountPrice.textContent = formatPrice(parseFloat(featuredDiscountPrice.dataset.usdPrice));
-    }
-    if (featuredOriginalPrice && featuredOriginalPrice.dataset.usdPrice) {
-        featuredOriginalPrice.textContent = formatPrice(parseFloat(featuredOriginalPrice.dataset.usdPrice));
-    }
-
-    // Update button text
-    priceToggleBtn.textContent = `Price: ${currentCurrency}`;
-};
-
+        // Update Deal of the Day prices
+        if (featuredDiscountPrice && featuredDiscountPrice.dataset.usdPrice) {
+            featuredDiscountPrice.textContent = formatPrice(parseFloat(featuredDiscountPrice.dataset.usdPrice));
+        }
+        if (featuredOriginalPrice && featuredOriginalPrice.dataset.usdPrice) {
+            featuredOriginalPrice.textContent = formatPrice(parseFloat(featuredOriginalPrice.dataset.usdPrice));
+        }
 
         // Update button text
         priceToggleBtn.textContent = `Price: ${currentCurrency}`;
@@ -547,6 +541,4 @@ Document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize the page when DOM is loaded
     initializePage();
-});
-Main price to usd me add Kara hun, lekin price ke toggle button pe click karne ke baad product price INR me convert hone chahiye
-
+}); 
