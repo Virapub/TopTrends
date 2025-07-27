@@ -199,7 +199,7 @@ h2::after {
 .name-second {
   font-size: 0.5rem;
 }
-.logo a {
+.logo {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8em;
     font-weight: 700;
