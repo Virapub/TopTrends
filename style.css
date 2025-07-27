@@ -263,7 +263,7 @@ h2::after {
 }
 
 .categories-nav {
-  background-color: #0f3f3f3(--dark);
+  background-color: var(--dark);
   padding: 15px 0;
 }
 
