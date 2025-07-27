@@ -1,6 +1,6 @@
 // script.js
 
-Document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Show loading spinner
     const loadingSpinner = document.getElementById('loading-spinner');
     loadingSpinner.style.opacity = '1';
