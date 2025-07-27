@@ -1,8 +1,10 @@
+/* Enhanced CSS with improved UI/UX and modern design */
+
 :root {
     --primary-color: #FF6B6B;
     --secondary-color: #4ECDC4;
     --accent-color: #FFE66D;
-    --dark-bg: #0f1111;;
+    --dark-bg: #2C3E50;
     --light-text: #ECF0F1;
     --dark-text: #34495E;
     --card-bg: #FFFFFF;
@@ -158,7 +160,7 @@ h2::after {
 
 /* Enhanced Header */
 .main-header {
-    background: #1f2937;
+    background: rgba(44, 62, 80, 0.95);
     backdrop-filter: blur(10px);
     color: var(--light-text);
     padding: 15px 0;
@@ -278,7 +280,7 @@ h2::after {
 }
 
 .category-link:hover, .category-link.active {
-  background-color: var(--#0f1111);
+  background-color: var(--primary);
 }
 
 /* Hero Section */
