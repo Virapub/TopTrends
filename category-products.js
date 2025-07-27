@@ -445,8 +445,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryObj = productCategories.find(cat => cat.id === currentCategory) || 
                       productCategories.find(cat => cat.id === 'electronics');
     
+    // Force hide loading spinner after 2 seconds
+    setTimeout(() => {
+        if (loadingSpinner) {
+            loadingSpinner.style.display = 'none';
+        }
+    }, 2000);
+    
     updateCategoryDisplay(categoryObj);
     createCategoryButtons();
     populateProductGrid(currentCategory);
     updateAllPrices();
 });
+
