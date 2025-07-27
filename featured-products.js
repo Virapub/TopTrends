@@ -437,8 +437,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Initialize Page ---
+    console.log('Initializing featured-products page...');
+    console.log('Products data:', productsData ? productsData.length : 'undefined');
+    console.log('Categories data:', productCategories ? productCategories.length : 'undefined');
+    
+    // Force hide loading spinner after 2 seconds
+    setTimeout(() => {
+        if (loadingSpinner) {
+            loadingSpinner.style.display = 'none';
+        }
+    }, 2000);
+    
     updateProductsTitle(currentFilter);
     populateProductGrid(currentFilter);
     updateAllPrices();
+    
+    console.log('Featured-products page initialized successfully');
 });
 
