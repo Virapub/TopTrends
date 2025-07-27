@@ -142,7 +142,7 @@ const productsData = [
         priceUSD: 89.99,
         images: [
             'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=400&fit=crop',
-            'https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&h=400&fit=crop',
+             'https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=600&h=400&fit=crop',
             'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=600&h=400&fit=crop'
         ],
         affiliateLink: 'https://solarcharge.example.com/buy'
