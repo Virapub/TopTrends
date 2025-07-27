@@ -1277,7 +1277,7 @@ h2::after {
 }
 
 .footer-col h3 {
-    background: var(--gradient-secondary);
+    background: var(--solid-blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
