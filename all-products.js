@@ -415,9 +415,17 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Products data:', productsData);
     console.log('Categories data:', productCategories);
     
+    // Force hide loading spinner after 2 seconds
+    setTimeout(() => {
+        if (loadingSpinner) {
+            loadingSpinner.style.display = 'none';
+        }
+    }, 2000);
+    
     createCategoryFilters();
     populateProductGrid('all');
     updateAllPrices();
     
     console.log('All-products page initialized successfully');
 });
+
