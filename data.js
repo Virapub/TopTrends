@@ -237,6 +237,4 @@ const productCategories = [
     { id: 'highly-rated', name: 'Highly Rated', icon: '⭐' }
 ];
 
-// Exchange rate (as of July 26, 2025) - Please update this rate regularly!
-const USD_TO_INR_RATE = 83.50;
 
