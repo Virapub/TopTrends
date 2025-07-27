@@ -1,4 +1,3 @@
-// Enhanced data.js with more products and categories
 
 const productsData = [
     // Electronics Category
