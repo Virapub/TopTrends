@@ -1,0 +1,168 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Products - GreenTrend</title>
+    <meta name="description" content="Browse our featured and trending products.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400,600,700&family=Poppins:wght@300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style(10).css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
+</head>
+<body>
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-content">
+                <div class="logo">
+                <a href="index.html" aria-label="GreenTrend Home">GreenTrend</a>
+            </div>  
+            <div class="site-name border">
+                <p class="name-first">GreenTrend</p>
+                <div class="tag-name">
+                    <p class="name-second">Smart Gadget Store</p>
+                </div>
+                </div>
+            </nav>
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search gadgets..." aria-label="Search products">
+                    <button aria-label="Search"><i class="fas fa-search"></i></button>
+                </div>
+                <button id="priceToggleBtn" class="btn btn-secondary price-toggle-btn">Price: USD</button>
+            </div>
+        </div>
+    </header>
+    
+  <!-- Categories Navigation -->
+  <div class="categories-nav">
+    <div class="container">
+      <a href="index.html" class="category-link">Home</a>
+      <a href="all-products.html" class="category-link">All Products</a>
+      <a href="featured-products.html" class="category-link active">Featured</a>
+      <a href="category-products.html?category=electronics" class="category-link">Gadgets</a>
+      <a href="#contact" class="category-link">Contact</a>
+      </div>
+  </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Featured Products</h1>
+            <p>Discover our handpicked selection of trending and highly-rated gadgets</p>
+        </div>
+    </section>
+
+    <section id="featured" class="featured-innovation-section container">
+        <h2>🔥 Today's Deal: Quantum Leap Earbuds 🔥</h2>
+        <div class="featured-gadget-card">
+            <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=400&fit=crop" alt="Quantum Leap Earbuds" loading="lazy">
+            <div class="gadget-details">
+                <h3>Quantum Leap Earbuds</h3>
+                <p class="tagline">Immersive sound, futuristic design, and 24-hour battery life.</p>
+                <p class="description">Experience audio like never before with Quantum Leap Earbuds. Featuring active noise cancellation, crystal-clear calls, and a sleek ergonomic design. Perfect for work, travel, and play.</p>
+                <div class="price-info">
+                    <span class="original-price" data-usd-price="199.99">$199.99</span>
+                    <span class="discount-price" data-usd-price="129.99">$129.99</span>
+                </div>
+                <button class="btn btn-primary add-to-cart-featured" data-product-id="2">Grab the Deal!</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-categories container">
+        <h2>Featured Categories</h2>
+        <div class="featured-category-buttons">
+            <button class="btn filter-btn active" data-filter="new-arrivals">✨ New Arrivals</button>
+            <button class="btn filter-btn" data-filter="trending">🔥 Trending</button>
+            <button class="btn filter-btn" data-filter="highly-rated">⭐ Highly Rated</button>
+        </div>
+    </section>
+
+    <section id="products-section" class="product-display-section container">
+        <h2 id="productsTitle">New Arrivals</h2>
+
+        <div class="gadget-grid" id="gadgetGrid">
+            </div>
+
+        </section>
+
+    <footer id="contact" class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>GreenTrend</h3>
+                <p>Your one-stop shop for the most innovative and unique gadgets!</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="featured-products.html">Featured</a></li>
+                    <li><a href="all-products.html">Gadgets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 GreenTrend. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="quickViewModal" class="modal" role="dialog" aria-labelledby="modal-product-name" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close-button" aria-label="Close modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-gallery">
+                    <img id="modal-main-image" src="" alt="Product Image">
+                    <div class="modal-thumbnails">
+                        </div>
+                </div>
+                <div class="modal-details">
+                    <h3 id="modal-product-name"></h3>
+                    <p id="modal-product-description"></p>
+                    <p class="modal-price" id="modal-product-price"></p>
+                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
+                    <a href="#" class="btn btn-secondary view-full-details" id="modalViewFullDetailsBtn">View Full Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="productDetailPage" class="product-detail-page container" style="display: none;">
+        <button class="btn btn-back-to-products" id="backToProductsBtn">
+            <i class="fas fa-arrow-left"></i> Back to Featured
+        </button>
+        <div class="product-detail-content">
+            <div class="product-detail-image-gallery">
+                <img id="detail-main-image" src="" alt="Product Detail Image">
+                <div id="detail-thumbnails" class="detail-thumbnails">
+                    </div>
+            </div>
+            <div class="product-detail-info">
+                <h1 id="detail-product-name"></h1>
+                <p class="product-detail-price" id="detail-product-price"></p>
+                <p class="product-detail-description" id="detail-product-long-description"></p>
+                <button class="btn btn-primary add-to-cart" id="detailAddToCartBtn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="related-products">
+            <h3>You Might Also Like</h3>
+            <div class="gadget-grid">
+                </div>
+        </div>
+    </section>
+
+    <script src="data(10).js"></script>
+    <script src="featured-products.js"></script>
+</body>
+</html>
+
