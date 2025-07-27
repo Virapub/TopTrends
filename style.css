@@ -158,7 +158,7 @@ h2::after {
 
 /* Enhanced Header */
 .main-header {
-    background: rgba(44, 62, 80, 0.95);
+    background: #1f2937;
     backdrop-filter: blur(10px);
     color: var(--light-text);
     padding: 15px 0;
