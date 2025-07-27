@@ -264,6 +264,25 @@ h2::after {
     background: var(--gradient-secondary);
 }
 
+.categories-nav {
+  background-color: var(--dark);
+  padding: 15px 0;
+}
+
+.category-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.category-link:hover, .category-link.active {
+  background-color: var(--primary);
+}
+
 /* Hero Section */
 .hero-section {
     position: relative;
