@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if data is loaded
+    if (typeof productsData === 'undefined' || typeof productCategories === 'undefined') {
+        console.error('Data not loaded. Please check if data(10).js is properly included.');
+        return;
+    }
+
     // Show loading spinner
     const loadingSpinner = document.getElementById('loading-spinner');
     loadingSpinner.style.opacity = '1';
@@ -444,4 +450,3 @@ document.addEventListener('DOMContentLoaded', () => {
     populateProductGrid(currentCategory);
     updateAllPrices();
 });
-
