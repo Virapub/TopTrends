@@ -267,6 +267,7 @@ h2::after {
 .categories-nav {
   background-color: var(--dark);
   padding: 15px 0;
+  text-color: black;
 }
 
 .category-link {
