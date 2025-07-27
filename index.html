@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenTrend - Smart and Unique Gadgets</title>
-    <meta name="description" content="Discover the technology of tomorrow, today. A collection of innovative and unique gadgets.">
+    <title>GreenTrend - Smart Gadget Store</title>
+    <meta name="description" content="Discover innovative and unique gadgets that redefine possibilities.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400,600,700&family=Poppins:wght@300,400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style(10).css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
 </head>
@@ -17,75 +17,81 @@
 
     <header class="main-header">
         <div class="container header-content">
-                <div class="logo">
-                <a href="#" aria-label="InnoGadget Hub Home">GreenTrend</a>
-            </div>  
-            <div class="site-name border">
-                <p class="name-first">GreenTrend</p>
-                <div class="tag-name">
-                    <p class="name-second">Smart Gadget Store</p>
-                </div>
-                </div>
-            </nav>
-            <div class="header-right">
+            <div class="logo">
+                <h1>GreenTrend</h1>
+                <p>Smart Gadget Store</p>
+            </div>
+            <div class="header-actions">
                 <div class="search-bar">
-                    <input type="text" placeholder="Search gadgets..." aria-label="Search products">
-                    <button aria-label="Search"><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="Search gadgets..." aria-label="Search gadgets">
+                    <button type="button" aria-label="Search"><i class="fas fa-search"></i></button>
                 </div>
-                <button id="priceToggleBtn" class="btn btn-secondary price-toggle-btn">Price: USD</button>
+                <button id="priceToggleBtn" class="btn btn-secondary">Price: USD</button>
             </div>
         </div>
     </header>
-    
-  <!-- Categories Navigation -->
-  <div class="categories-nav">
-    <div class="container">
-      <a href="index.html" class="category-link active">Home</a>
-      <a href="all-products.html" class="category-link">All Products</a>
-      <a href="featured-products.html" class="category-link">Featured</a>
-      <a href="category-products.html?category=electronics" class="category-link">Gadgets</a>
-      <a href="#contact" class="category-link">Contact</a>
-      </div>
-  </div>
 
-    <section class="hero-section">
+    <div class="categories-nav">
+        <div class="container">
+            <a href="index.html" class="category-link active">Home</a>
+            <a href="all-products.html" class="category-link">All Products</a>
+            <a href="featured-products.html" class="category-link">Featured</a>
+            <a href="category-products.html?category=electronics" class="category-link">Gadgets</a>
+            <a href="#contact" class="category-link">Contact</a>
+        </div>
+    </div>
+
+    <section class="hero">
         <div class="container hero-content">
-            <h1>Unlock Tomorrow's Tech, Today.</h1>
+            <h2>Unlock Tomorrow's Tech, Today.</h2>
             <p>Discover a curated collection of innovative and unique gadgets that redefine possibilities.</p>
-            <a href="all-products.html" class="btn btn-primary">Explore Gadgets</a>
+            <a href="category-products.html?category=electronics" class="btn btn-primary">EXPLORE GADGETS</a>
         </div>
     </section>
 
-    <section id="featured" class="featured-innovation-section container">
-        <h2>🔥 Today's Deal: Quantum Leap Earbuds 🔥</h2>
-        <div class="featured-gadget-card">
-            <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=400&fit=crop" alt="Quantum Leap Earbuds" loading="lazy">
-            <div class="gadget-details">
-                <h3>Quantum Leap Earbuds</h3>
-                <p class="tagline">Immersive sound, futuristic design, and 24-hour battery life.</p>
-                <p class="description">Experience audio like never before with Quantum Leap Earbuds. Featuring active noise cancellation, crystal-clear calls, and a sleek ergonomic design. Perfect for work, travel, and play.</p>
-                <div class="price-info">
-                    <span class="original-price" data-usd-price="199.99">$199.99</span>
-                    <span class="discount-price" data-usd-price="129.99">$129.99</span>
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="featured-gadget-card">
+                <div class="deal-badge">
+                    <span>🔥 Today's Deal: Quantum Leap Earbuds 🎧</span>
                 </div>
-                <button class="btn btn-primary add-to-cart-featured" data-product-id="2">Grab the Deal!</button>
+                <div class="featured-content">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Quantum Leap Earbuds" loading="lazy">
+                    </div>
+                    <div class="featured-details">
+                        <h3>Quantum Leap Earbuds</h3>
+                        <p>Experience sound like never before with our revolutionary quantum-enhanced audio technology.</p>
+                        <div class="featured-price">
+                            <span class="discount-price" data-usd-price="199.99">$199.99</span>
+                            <span class="original-price" data-usd-price="299.99">$299.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-featured" data-product-id="2">Buy Now</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="counters-section">
-        <div class="container counters-content">
-            <div class="counter-item">
-                <div class="counter" data-target="15648">0</div>
-                <p>Satisfied Customers</p>
-            </div>
-            <div class="counter-item">
-                <div class="counter" data-target="500">0</div>
-                <p>Unique Gadgets</p>
-            </div>
-            <div class="counter-item">
-                <div class="counter" data-target="7675">0</div>
-                <p>5-Star Reviews</p>
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="10000">0</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Products Sold</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Unique Gadgets</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
             </div>
         </div>
     </section>
@@ -93,14 +99,15 @@
     <footer id="contact" class="main-footer">
         <div class="container footer-content">
             <div class="footer-col">
-                <h3>InnoGadget Hub</h3>
+                <h3>GreenTrend</h3>
                 <p>Your one-stop shop for the most innovative and unique gadgets!</p>
             </div>
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="featured-products.html">Featured</a></li>
-                    <li><a href="all-products.html">Gadgets</a></li>
+                    <li><a href="all-products.html">All Products</a></li>
+                    <li><a href="category-products.html?category=electronics">Gadgets</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -115,55 +122,12 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 InnoGadget Hub. All rights reserved.</p>
+            <p>© 2025 GreenTrend. All rights reserved.</p>
         </div>
     </footer>
 
-    <div id="quickViewModal" class="modal" role="dialog" aria-labelledby="modal-product-name" aria-hidden="true">
-        <div class="modal-content">
-            <span class="close-button" aria-label="Close modal">&times;</span>
-            <div class="modal-body">
-                <div class="modal-image-gallery">
-                    <img id="modal-main-image" src="" alt="Product Image">
-                    <div class="modal-thumbnails">
-                        </div>
-                </div>
-                <div class="modal-details">
-                    <h3 id="modal-product-name"></h3>
-                    <p id="modal-product-description"></p>
-                    <p class="modal-price" id="modal-product-price"></p>
-                    <button class="btn btn-primary add-to-cart">Add to Cart</button>
-                    <a href="#" class="btn btn-secondary view-full-details" id="modalViewFullDetailsBtn">View Full Details</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section id="productDetailPage" class="product-detail-page container" style="display: none;">
-        <button class="btn btn-back-to-products" id="backToProductsBtn">
-            <i class="fas fa-arrow-left"></i> Back to Gadgets
-        </button>
-        <div class="product-detail-content">
-            <div class="product-detail-image-gallery">
-                <img id="detail-main-image" src="" alt="Product Detail Image">
-                <div id="detail-thumbnails" class="detail-thumbnails">
-                    </div>
-            </div>
-            <div class="product-detail-info">
-                <h1 id="detail-product-name"></h1>
-                <p class="product-detail-price" id="detail-product-price"></p>
-                <p class="product-detail-description" id="detail-product-long-description"></p>
-                <button class="btn btn-primary add-to-cart" id="detailAddToCartBtn">Add to Cart</button>
-            </div>
-        </div>
-        <div class="related-products">
-            <h3>You Might Also Like</h3>
-            <div class="gadget-grid">
-                </div>
-        </div>
-    </section>
-
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <script src="data(10).js"></script>
+    <script src="script(3).js"></script>
 </body>
 </html>
+
