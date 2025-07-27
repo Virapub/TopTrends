@@ -1,18 +1,18 @@
 /* Enhanced CSS with improved UI/UX and modern design */
 
 :root {
-    --primary-color: #FF6B6B;
-    --secondary-color: #4ECDC4;
-    --accent-color: #FFE66D;
-    --dark-bg: #2C3E50;
-    --light-text: #ECF0F1;
-    --dark-text: #34495E;
-    --card-bg: #FFFFFF;
+    --primary-color: #6C63FF; /* A vibrant, modern purple */
+    --secondary-color: #5DCDCD; /* A calming teal */
+    --accent-color: #FFC107; /* A bright, energetic yellow */
+    --dark-bg: #212529; /* A deep, rich dark grey */
+    --light-text: #F8F9FA; /* Off-white for readability */
+    --dark-text: #343A40; /* Dark grey for body text */
+    --card-bg: #FFFFFF; /* Pure white for cards */
     --shadow-light: rgba(0, 0, 0, 0.1);
     --shadow-medium: rgba(0, 0, 0, 0.2);
     --shadow-heavy: rgba(0, 0, 0, 0.3);
-    --gradient-primary: linear-gradient(135deg, #FF6B6B, #4ECDC4);
-    --gradient-secondary: linear-gradient(135deg, #4ECDC4, #FFE66D);
+    --gradient-primary: linear-gradient(135deg, #6C63FF, #5DCDCD); /* Purple to Teal */
+    --gradient-secondary: linear-gradient(135deg, #5DCDCD, #FFC107); /* Teal to Yellow */
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -104,23 +104,23 @@ h2::after {
 .btn-primary {
     background: var(--gradient-primary);
     color: var(--light-text);
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3); /* Adjust shadow color to primary */
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.4); /* Adjust shadow color to primary */
 }
 
 .btn-secondary {
     background: var(--gradient-secondary);
     color: var(--dark-bg);
-    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+    box-shadow: 0 4px 15px rgba(93, 205, 205, 0.3); /* Adjust shadow color to secondary */
 }
 
 .btn-secondary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4);
+    box-shadow: 0 8px 25px rgba(93, 205, 205, 0.4); /* Adjust shadow color to secondary */
 }
 
 .btn:disabled {
@@ -160,7 +160,7 @@ h2::after {
 
 /* Enhanced Header */
 .main-header {
-    background: rgba(44, 62, 80, 0.95);
+    background: rgba(33, 37, 41, 0.95); /* Use dark-bg with opacity */
     backdrop-filter: blur(10px);
     color: var(--light-text);
     padding: 15px 0;
@@ -248,7 +248,7 @@ h2::after {
 }
 
 .search-bar input::placeholder {
-    color: rgba(236, 240, 241, 0.7);
+    color: rgba(248, 249, 250, 0.7); /* Adjust placeholder color */
 }
 
 .search-bar button {
@@ -266,7 +266,7 @@ h2::after {
 
 .panel {
   height: 40px;
-  background-color: #222f3d;
+  background-color: var(--dark-bg); /* Use dark-bg variable */
   display: flex;
   color: white;
   align-items: center;
@@ -282,13 +282,13 @@ h2::after {
 }
 
 .categories-nav {
-  background-color: var(--dark);
+  background-color: var(--dark-bg); /* Use dark-bg variable */
   padding: 15px 0;
-  text-color: black;
+  color: var(--light-text); /* Use light-text for category links */
 }
 
 .category-link {
-  color: white;
+  color: var(--light-text);
   text-decoration: none;
   margin-right: 20px;
   font-weight: 500;
@@ -298,7 +298,7 @@ h2::after {
 }
 
 .category-link:hover, .category-link.active {
-  background-color: var(--primary);
+  background-color: var(--primary-color); /* Use primary color */
 }
 
 /* Hero Section */
@@ -310,7 +310,7 @@ h2::after {
     justify-content: center;
     color: var(--light-text);
     text-align: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #6C63FF 0%, #5DCDCD 100%); /* Use primary and secondary color */
     overflow: hidden;
 }
 
@@ -379,7 +379,7 @@ h2::after {
     gap: 40px;
     align-items: center;
     padding: 40px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Lighter background for the card */
     border-radius: 20px;
     box-shadow: 0 10px 30px var(--shadow-medium);
     position: relative;
@@ -393,7 +393,7 @@ h2::after {
     right: -50%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255,107,107,0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(108,99,255,0.1) 0%, transparent 70%); /* Adjust primary color in gradient */
     animation: pulse 4s ease-in-out infinite;
 }
 
@@ -451,7 +451,7 @@ h2::after {
 /* Enhanced Product Grid */
 .product-display-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Lighter background for product display */
 }
 
 .filter-buttons {
@@ -482,7 +482,7 @@ h2::after {
 .filter-btn.active {
     background: var(--gradient-primary);
     color: var(--light-text);
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.3); /* Adjust shadow color to primary */
 }
 
 .gadget-grid {
@@ -739,7 +739,7 @@ h2::after {
 /* Product Detail Page */
 .product-detail-page {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Lighter background */
     min-height: 100vh;
 }
 
@@ -940,14 +940,14 @@ h2::after {
 
 .social-icons a:hover {
     transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.4); /* Adjust shadow color to primary */
 }
 
 .footer-bottom {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(236, 240, 241, 0.8);
+    color: rgba(248, 249, 250, 0.8); /* Adjust color */
 }
 
 /* Responsive Design */
@@ -1065,7 +1065,7 @@ h2::after {
 
 /* Page Header Styles */
 .page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #6C63FF 0%, #5DCDCD 100%); /* Use primary and secondary color */
     color: var(--light-text);
     text-align: center;
     padding: 80px 20px 60px;
@@ -1126,7 +1126,7 @@ h2::after {
 .category-buttons .btn.active {
     background: var(--gradient-primary);
     color: var(--light-text);
-    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.3); /* Adjust shadow color to primary */
 }
 
 /* Featured Categories Styles */
@@ -1194,7 +1194,7 @@ h2::after {
     background: var(--gradient-primary);
     color: var(--light-text);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3); /* Adjust shadow color to primary */
 }
 
 /* Loading animation improvements */
@@ -1291,4 +1291,3 @@ h2::after {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-
