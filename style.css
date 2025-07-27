@@ -278,7 +278,7 @@ h2::after {
 }
 
 .category-link:hover, .category-link.active {
-  background-color: var(--primary);
+  background-color: var(--#0f1111);
 }
 
 /* Hero Section */
