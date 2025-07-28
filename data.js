@@ -1,7 +1,7 @@
 
 const productsData = [
     {
-        id: 1,
+        id: 11,
         name: 'FoldMate Cutting Board',
         category: 'home-living kitchen-tools trending new-arrivals',
         shortDescription: 'Foldable chopping board with built-in strainer.',
@@ -15,7 +15,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3HFDf5u'
     },
     {
-        id: 2,
+        id: 12,
         name: 'FlexiDrain Colander',
         category: 'home-living kitchen-tools highly-rated',
         shortDescription: 'Collapsible silicone colander with handles.',
@@ -28,7 +28,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3XEtMDF'
     },
     {
-        id: 3,
+        id: 13,
         name: 'SnapFold Kettle',
         category: 'electronics travel-outdoor smart-kitchen new-arrivals',
         shortDescription: 'Foldable electric kettle for travel and compact kitchens.',
@@ -41,7 +41,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3R7tiZ9'
     },
     {
-        id: 4,
+        id: 14,
         name: 'SpaceDry Dish Rack',
         category: 'home-living organizers highly-rated',
         shortDescription: 'Foldable dish drying rack with drip tray.',
@@ -54,7 +54,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/4fJ5dHr'
     },
     {
-        id: 5,
+        id: 15,
         name: 'PopCup Measuring Set',
         category: 'home-living kitchen-tools budget-picks trending',
         shortDescription: 'Collapsible silicone measuring cups set.',
@@ -67,7 +67,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3R3vEZF'
     },
     {
-        id: 6,
+        id: 16,
         name: 'FoldBin Trash Can',
         category: 'home-living smart-kitchen kitchen-hacks trending',
         shortDescription: 'Foldable wall-mount trash bin for cabinets.',
@@ -80,7 +80,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3WOl9hH'
     },
     {
-        id: 7,
+        id: 17,
         name: 'MultiStack Organizer Basket',
         category: 'home-living organizers kitchen-tools highly-rated',
         shortDescription: 'Foldable 2-layer kitchen basket for veggies or snacks.',
@@ -93,7 +93,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3HKHHta'
     },
     {
-        id: 8,
+        id: 18,
         name: 'FlatFold Sink Rack Tray',
         category: 'home-living smart-kitchen kitchen-tools new-arrivals',
         shortDescription: '3-in-1 foldable sink rack for drying or prepping.',
@@ -106,7 +106,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3XEUjEq'
     },
     {
-        id: 9,
+        id: 19,
         name: 'SnapFunnel Silicone Set',
         category: 'home-living kitchen-tools budget-picks kitchen-hacks',
         shortDescription: 'Foldable silicone funnel set for liquids and powders.',
@@ -119,7 +119,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3VQl1PH'
     },
     {
-        id: 10,
+        id: 20,
         name: 'FoldBox Bento Lunch Set',
         category: 'home-living travel-outdoor smart-kitchen lunchbox trending',
         shortDescription: 'Collapsible silicone lunch box with compartments.',
@@ -132,7 +132,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3XP1znF'
     },
     {
-        id: 1,
+        id: 21,
         name: 'FlexiScreen Pro',
         category: 'electronics new-arrivals highly-rated',
         shortDescription: 'Self-healing screen protector for any device.',
@@ -146,7 +146,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/4fhuo4k'
     },
     {
-        id: 2,
+        id: 22,
         name: 'Quantum Leap Earbuds',
         category: 'electronics audio new-arrivals highly-rated',
         shortDescription: 'Premium wireless earbuds with noise cancellation.',
@@ -160,7 +160,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3Utu2Oi'
     },
     {
-        id: 3,
+        id: 23,
         name: 'Smart Watch Pro Max',
         category: 'electronics wearable trending',
         shortDescription: 'Advanced fitness tracking with health monitoring.',
@@ -174,7 +174,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/4mcIIgu'
     },
     {
-        id: 4,
+        id: 24,
         name: 'Wireless Charging Station',
         category: 'electronics accessories trending',
         shortDescription: '3-in-1 wireless charger for all devices.',
@@ -190,7 +190,7 @@ const productsData = [
 
     // Home & Living Category
     {
-        id: 5,
+        id: 25,
         name: '100W Portable Corded Soldering Iron Kit',
         category: '100W Portable Corded Soldering Iron Kit',
         shortDescription: 'AI-powered lamp adapts to your mood.',
@@ -204,7 +204,7 @@ const productsData = [
         affiliateLink: 'https://amzn.to/3TWXsnV'
     },
     {
-        id: 6,
+        id: 26,
         name: 'Smart AeroGarden',
         category: 'home-living gardening trending highly-rated',
         shortDescription: 'Grow fresh herbs indoors, effortlessly.',
@@ -218,7 +218,7 @@ const productsData = [
         affiliateLink: 'https://aerogarden.example.com/buy'
     },
     {
-        id: 7,
+        id: 27,
         name: 'Air Purifier Pro',
         category: 'home-living health new-arrivals',
         shortDescription: 'HEPA filtration with smart air quality monitoring.',
@@ -234,7 +234,7 @@ const productsData = [
 
     // Health & Fitness Category
     {
-        id: 8,
+        id: 28,
         name: 'EcoFlow Smart Bottle',
         category: 'health-fitness hydration new-arrivals',
         shortDescription: 'Tracks hydration, purifies water.',
@@ -248,7 +248,7 @@ const productsData = [
         affiliateLink: 'https://ecoflow.example.com/buy'
     },
     {
-        id: 9,
+        id: 29,
         name: 'Yoga Mat Smart',
         category: 'health-fitness yoga trending',
         shortDescription: 'Interactive yoga mat with pose guidance.',
@@ -264,7 +264,7 @@ const productsData = [
 
     // Travel & Outdoor Category
     {
-        id: 10,
+        id: 30,
         name: 'SolarCharge Backpack',
         category: 'travel-outdoor solar new-arrivals',
         shortDescription: 'Charge devices on the go with solar power.',
@@ -278,7 +278,7 @@ const productsData = [
         affiliateLink: 'https://solarcharge.example.com/buy'
     },
     {
-        id: 11,
+        id: 31,
         name: 'Portable Espresso Maker',
         category: 'travel-outdoor coffee trending',
         shortDescription: 'Barista-quality coffee anywhere, anytime.',
@@ -294,7 +294,7 @@ const productsData = [
 
     // Pet Care Category
     {
-        id: 12,
+        id: 32,
         name: 'PetPal Companion',
         category: 'pet-care interactive highly-rated trending',
         shortDescription: 'Interactive robot for pet entertainment.',
@@ -308,7 +308,7 @@ const productsData = [
         affiliateLink: 'https://petpal.example.com/buy'
     },
     {
-        id: 13,
+        id: 33,
         name: 'Smart Pet Feeder',
         category: 'pet-care smart-home new-arrivals',
         shortDescription: 'Automated feeding with portion control.',
@@ -324,7 +324,7 @@ const productsData = [
 
     // Gaming & Entertainment Category
     {
-        id: 14,
+        id: 34,
         name: 'VR Headset Lite',
         category: 'gaming-entertainment vr new-arrivals',
         shortDescription: 'Affordable VR experience for everyone.',
@@ -338,7 +338,7 @@ const productsData = [
         affiliateLink: 'https://vrheadsetlite.example.com/buy'
     },
     {
-        id: 15,
+        id: 35,
         name: 'Retro Gaming Console',
         category: 'gaming-entertainment retro trending highly-rated',
         shortDescription: 'Classic games in a modern package.',
