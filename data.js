@@ -1,6 +1,136 @@
 
 const productsData = [
-    // Electronics Category
+    {
+        id: 1,
+        name: 'FoldMate Cutting Board',
+        category: 'home-living kitchen-tools trending new-arrivals',
+        shortDescription: 'Foldable chopping board with built-in strainer.',
+        longDescription: 'This multi-functional foldable cutting board doubles as a colander. Easily chop, wash, and drain vegetables in one go. Folds flat for easy storage, making it ideal for small kitchens and travel.',
+        priceUSD: 10.99,
+        images: [
+            'https://m.media-amazon.com/images/I/71kgVuVZX2L._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/71TfWk8p2yL._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/71T3A+9iJZL._AC_SY355_.jpg'
+        ],
+        affiliateLink: 'https://amzn.to/3HFDf5u'
+    },
+    {
+        id: 2,
+        name: 'FlexiDrain Colander',
+        category: 'home-living kitchen-tools highly-rated',
+        shortDescription: 'Collapsible silicone colander with handles.',
+        longDescription: 'Space-saving silicone colander perfect for rinsing fruits, veggies, and pasta. Collapses flat to fit drawers or hang easily. Heat-resistant and BPA-free — a must-have for modern kitchens.',
+        priceUSD: 8.49,
+        images: [
+            'https://m.media-amazon.com/images/I/61QeIoCZxHL._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/61wl7Z4wRxL._AC_SY355_.jpg'
+        ],
+        affiliateLink: 'https://amzn.to/3XEtMDF'
+    },
+    {
+        id: 3,
+        name: 'SnapFold Kettle',
+        category: 'electronics travel-outdoor smart-kitchen new-arrivals',
+        shortDescription: 'Foldable electric kettle for travel and compact kitchens.',
+        longDescription: 'Portable and foldable electric kettle with dual voltage. Ideal for travel, hostels, and small apartments. Boils water quickly and folds down to save storage space. Silicone body, food-grade, and easy to clean.',
+        priceUSD: 24.99,
+        images: [
+            'https://m.media-amazon.com/images/I/61OPxhN54WL._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/71-rTtIjYhL._AC_SY355_.jpg'
+        ],
+        affiliateLink: 'https://amzn.to/3R7tiZ9'
+    },
+    {
+        id: 4,
+        name: 'SpaceDry Dish Rack',
+        category: 'home-living organizers highly-rated',
+        shortDescription: 'Foldable dish drying rack with drip tray.',
+        longDescription: 'This foldable drying rack is perfect for drying utensils and plates without taking up counter space. Made of durable steel and silicone with removable drip tray. Folds flat when not in use.',
+        priceUSD: 17.89,
+        images: [
+            'https://m.media-amazon.com/images/I/61VjAdCD8bL._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/71NldFcGeBL._AC_SY355_.jpg'
+        ],
+        affiliateLink: 'https://amzn.to/4fJ5dHr'
+    },
+    {
+        id: 5,
+        name: 'PopCup Measuring Set',
+        category: 'home-living kitchen-tools budget-picks trending',
+        shortDescription: 'Collapsible silicone measuring cups set.',
+        longDescription: 'Colorful measuring cups that collapse flat for drawer storage. Includes multiple sizes and BPA-free silicone. Great for baking, portion control, and travel cooking kits.',
+        priceUSD: 6.75,
+        images: [
+            'https://m.media-amazon.com/images/I/71R4gCJiVEL._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/71rTC5Cy4jL._AC_SY355_.jpg'
+        ],
+        affiliateLink: 'https://amzn.to/3R3vEZF'
+    },
+    {
+        id: 6,
+        name: 'FoldBin Trash Can',
+        category: 'home-living smart-kitchen kitchen-hacks trending',
+        shortDescription: 'Foldable wall-mount trash bin for cabinets.',
+        longDescription: 'Mount this foldable trash bin on your kitchen cabinet door and keep your counter clean while chopping. Closes when not in use, ideal for small kitchens and RVs.',
+        priceUSD: 9.95,
+        images: [
+            'https://m.media-amazon.com/images/I/71Upv6Ah3DL._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/71x60Wl6hWL._AC_SY355_.jpg'
+        ],
+        affiliateLink: 'https://amzn.to/3WOl9hH'
+    },
+    {
+        id: 7,
+        name: 'MultiStack Organizer Basket',
+        category: 'home-living organizers kitchen-tools highly-rated',
+        shortDescription: 'Foldable 2-layer kitchen basket for veggies or snacks.',
+        longDescription: 'A stylish foldable basket for storing onions, fruits, or snacks. Detachable, portable, and collapsible. Adds both function and style to your pantry or kitchen counter.',
+        priceUSD: 13.59,
+        images: [
+            'https://m.media-amazon.com/images/I/71cX4iZUSXL._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/71g3AO-PW8L._AC_SY355_.jpg'
+        ],
+        affiliateLink: 'https://amzn.to/3HKHHta'
+    },
+    {
+        id: 8,
+        name: 'FlatFold Sink Rack Tray',
+        category: 'home-living smart-kitchen kitchen-tools new-arrivals',
+        shortDescription: '3-in-1 foldable sink rack for drying or prepping.',
+        longDescription: 'Use it as a prep tray, over-the-sink drying rack, or as a mat. Folds flat and rolls away for storage. Durable silicone-coated steel design, heat-resistant and non-slip.',
+        priceUSD: 12.25,
+        images: [
+            'https://m.media-amazon.com/images/I/71gdN7IY6KL._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/71LGH3TYK1L._AC_SY355_.jpg'
+        ],
+        affiliateLink: 'https://amzn.to/3XEUjEq'
+    },
+    {
+        id: 9,
+        name: 'SnapFunnel Silicone Set',
+        category: 'home-living kitchen-tools budget-picks kitchen-hacks',
+        shortDescription: 'Foldable silicone funnel set for liquids and powders.',
+        longDescription: 'Flexible silicone funnels that fold flat into a disk. Easy to use, clean, and store. Ideal for pouring oil, spices, or soap into bottles without spilling.',
+        priceUSD: 4.99,
+        images: [
+            'https://m.media-amazon.com/images/I/71MkPgl7snL._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/61FzUglOaQL._AC_SY355_.jpg'
+        ],
+        affiliateLink: 'https://amzn.to/3VQl1PH'
+    },
+    {
+        id: 10,
+        name: 'FoldBox Bento Lunch Set',
+        category: 'home-living travel-outdoor smart-kitchen lunchbox trending',
+        shortDescription: 'Collapsible silicone lunch box with compartments.',
+        longDescription: 'This foldable lunch box is perfect for meal preps and school/work tiffins. Collapses to half its size, microwave & dishwasher safe. Comes with reusable cutlery.',
+        priceUSD: 14.49,
+        images: [
+            'https://m.media-amazon.com/images/I/71pDsRRSisL._AC_SY355_.jpg',
+            'https://m.media-amazon.com/images/I/61PZxnY32pL._AC_SY355_.jpg'
+        ],
+        affiliateLink: 'https://amzn.to/3XP1znF'
+    },
     {
         id: 1,
         name: 'FlexiScreen Pro',
