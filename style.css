@@ -273,7 +273,7 @@ h2::after {
   justify-content: space-evenly;
 }
 
-.panel-ops {
+.panel-ops li{
   display: inline;
 }
 
